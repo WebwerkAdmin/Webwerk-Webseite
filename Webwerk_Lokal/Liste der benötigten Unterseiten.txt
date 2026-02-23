@@ -1,0 +1,43 @@
+Liste der benötigten Unterseiten
+Basierend auf den vorhandenen Verlinkungen:
+
+Pflicht-Seiten (Legal):
+Impressum (#impressum)
+Datenschutzerklärung (#datenschutz)
+
+Leistungsseiten:
+Webdesign (#webdesign) - check
+Website-Entwicklung/Web-Entwicklung (#entwicklung) - check
+Digitale Automatisierung (#automatisierung) - check
+KI-Integration (#ki) - check
+
+Über uns - Seiten:
+Über Webwerk/Team (#team / #ueber-webwerk / #ueber-uns)
+Karriere (#karriere)
+Sicherheit & Datenschutz (#sicherheit / #datensicherheit)
+Förderung (#foerderung)
+Weitere Seiten:
+Prototyp-Info (#prototyp) - wird im Kontaktbereich erwähnt
+Demo-Seite (#demo) - mehrfach verlinkt
+Empfohlene zusätzliche Seiten:
+Portfolio/Referenzen - Projektbeispiele
+FAQ - Häufige Fragen
+Blog (optional) - für Content Marketing
+Preise (optional) - Transparenz bei Preisgestaltung
+Zusammenfassung
+Insgesamt benötigt: ~22 Unterseiten
+
+2 Legal-Seiten (Pflicht)
+5 Leistungsseiten
+5 Plattform-Seiten
+4 Über-uns-Seiten
+2 Aktions-Seiten (Prototyp, Demo)
+4 empfohlene zusätzliche Seiten
+Empfehlung für die Startseite:
+Füge noch hinzu:
+
+Testimonials-Sektion (3 Kundenstimmen)
+Portfolio-Teaser (2-3 Referenzprojekte)
+FAQ-Bereich (5-7 häufigste Fragen)
+Trust-Badges (z.B. "DSGVO-konform", "Made in Germany")
+Soll ich dir bei der Implementierung dieser zusätzlichen Elemente helfen oder die Unterseiten vorbereiten?

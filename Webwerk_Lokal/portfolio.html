@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Webwerk.ai – Entdecke ausgewählte Projekte und überzeuge Dich selbst von modernem Webdesign, Entwicklung und digitalen Lösungen.">
+    <meta property="og:title" content="Portfolio - Webwerk AI">
+    <meta property="og:description" content="Portfolio von Webwerk.ai – Entdecke ausgewählte Projekte und überzeuge Dich selbst von modernem Webdesign, Entwicklung und digitalen Lösungen.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/portfolio.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.webwerk.ai/portfolio.html">
+    <title>Portfolio - Webwerk AI</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 90%;
+        }
+
+        /* Portfolio Intro */
+        .portfolio-intro {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 2rem 80px;
+            text-align: center;
+        }
+
+        .portfolio-intro p {
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Filter Buttons */
+        .portfolio-filters {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 50px;
+            background: transparent;
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.is-active {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .portfolio-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+            background: #3a4554;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        /* Fallback wenn noch kein Bild hinterlegt */
+        .portfolio-image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #3a4554;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .portfolio-image-placeholder i {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        .portfolio-image-placeholder .placeholder-pattern {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                linear-gradient(225deg, rgba(34, 211, 238, 0.15) 0%, transparent 50%);
+        }
+
+        .portfolio-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(26, 26, 26, 0.85);
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+        }
+
+        .portfolio-content {
+            padding: 2rem 2.5rem 2.5rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-category {
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .portfolio-content p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-tag {
+            background: #f5f3f0;
+            color: #555;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        .portfolio-detail-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .portfolio-detail-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: 2rem;
+        }
+
+        .modal-overlay.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 20px;
+            max-width: 750px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-overlay.is-visible .modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-header {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+            background: #3a4554;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .modal-header-bg {
+            width: 100%;
+            height: 100%;
+            background: #3a4554;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .modal-header-bg .placeholder-pattern {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+                linear-gradient(225deg, rgba(34, 211, 238, 0.2) 0%, transparent 50%);
+        }
+
+        .modal-header-bg i {
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.15);
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-badge {
+            position: absolute;
+            top: 1.2rem;
+            left: 1.5rem;
+            background: rgba(26, 26, 26, 0.85);
+            color: #fff;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 2;
+        }
+
+        .modal-close:hover {
+            background: #fff;
+            transform: scale(1.1);
+        }
+
+        .modal-body {
+            padding: 2.5rem;
+        }
+
+        .modal-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.3rem;
+        }
+
+        .modal-category {
+            font-size: 0.95rem;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-description {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .modal-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .modal-detail-icon {
+            width: 40px;
+            height: 40px;
+            background: #f5f3f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .modal-detail-icon i {
+            font-size: 1.1rem;
+            color: #3a4554;
+        }
+
+        .modal-detail-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-detail-label {
+            font-size: 0.8rem;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-detail-value {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .modal-highlights {
+            background: #f5f3f0;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-highlights h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+        }
+
+        .modal-highlights ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .modal-highlights li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .modal-highlights li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #22d3ee;
+            font-weight: 700;
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-tag {
+            background: #f5f3f0;
+            color: #555;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .modal-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .modal-cta:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            .modal {
+                max-height: 90vh;
+                border-radius: 16px;
+            }
+
+            .modal-header {
+                height: 160px;
+                border-radius: 16px 16px 0 0;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-body h2 {
+                font-size: 1.4rem;
+            }
+
+            .modal-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Stats Bar */
+        .portfolio-stats {
+            background: #f5f3f0;
+            padding: 60px 2rem;
+        }
+
+        .portfolio-stats-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .portfolio-stat-item .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #6366f1, #22d3ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .portfolio-stat-item .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .portfolio-stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                padding: 150px 2rem 80px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+
+            .portfolio-stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .portfolio-stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Projekte, die begeistern</h1>
+            <p>Entdecke eine Auswahl meiner bisherigen Arbeiten. Jedes Projekt ist individuell auf die Bedürfnisse meiner Kunden zugeschnitten.</p>
+        </div>
+    </section>
+
+    <section class="portfolio-intro">
+        <p>Von modernem Webdesign über performante Webentwicklung bis hin zu intelligenten Automatisierungen – hier siehst Du, was ich für meine Kunden umgesetzt habe.<br><br>Jedes Projekt ist einzigartig, genau wie Dein Unternehmen.</p>
+    </section>
+
+    <div class="portfolio-filters">
+        <button class="filter-btn is-active" data-filter="all">Alle Projekte</button>
+        <button class="filter-btn" data-filter="webdesign">Webdesign</button>
+        <button class="filter-btn" data-filter="entwicklung">Webentwicklung</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <!-- Projekt 1 — Gastronomie -->
+        <div class="portfolio-card" data-category="webdesign" data-project="1">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-fotos-portfolio-demo-restaurant-html-2026-02-14-23_19_56.png" alt="Restaurant Zum Goldenen Hirsch" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-utensils"></i>
+                </div>
+                <span class="portfolio-badge">Webdesign</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Restaurant Zum Goldenen Hirsch</h3>
+                <p class="portfolio-category">Gastronomie</p>
+                <p>Einladender Webauftritt mit Online-Reservierung, digitaler Speisekarte und warmem Design, das die Qualität des Restaurants widerspiegelt.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Responsive Design</span>
+                    <span class="portfolio-tag">Reservierungssystem</span>
+                    <span class="portfolio-tag">SEO</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Projekt 2 — Handwerk -->
+        <div class="portfolio-card" data-category="entwicklung" data-project="2">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-handwerk-html-2026-02-14-23_07_13.png" alt="Meisterbetrieb Schäfer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-wrench-simple"></i>
+                </div>
+                <span class="portfolio-badge">Webentwicklung</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Meisterbetrieb Schäfer</h3>
+                <p class="portfolio-category">Handwerk &amp; Bau</p>
+                <p>Professionelle Handwerker-Website mit Projektgalerie, Vorher/Nachher-Vergleichen und intelligentem Kontaktformular für schnelle Auftragsanfragen.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Projektgalerie</span>
+                    <span class="portfolio-tag">Kontaktformular</span>
+                    <span class="portfolio-tag">Performance</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Projekt 3 — Gesundheit -->
+        <div class="portfolio-card" data-category="entwicklung" data-project="3">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-praxis-html-2026-02-14-23_15_44.png" alt="Praxis Dr. Weber" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-stethoscope"></i>
+                </div>
+                <span class="portfolio-badge">Webentwicklung</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Praxis Dr. Weber</h3>
+                <p class="portfolio-category">Gesundheit &amp; Praxis</p>
+                <p>Vertrauenswürdige Praxis-Website mit Online-Terminbuchung, Leistungsübersicht und DSGVO-konformer Patientenkommunikation.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Online-Terminbuchung</span>
+                    <span class="portfolio-tag">DSGVO</span>
+                    <span class="portfolio-tag">Responsive</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Projekt 4 — Fitness -->
+        <div class="portfolio-card" data-category="webdesign" data-project="4">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-fitness-html-2026-02-14-23_04_15.png" alt="FitLife Studio" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-dumbbell"></i>
+                </div>
+                <span class="portfolio-badge">Webdesign</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>FitLife Studio</h3>
+                <p class="portfolio-category">Fitness &amp; Wellness</p>
+                <p>Dynamischer, energiegeladener Webauftritt mit Kursplan, Trainer-Profilen und Online-Anmeldung. Modernes Design, das zum Training motiviert.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Kursplan</span>
+                    <span class="portfolio-tag">Mitgliederverwaltung</span>
+                    <span class="portfolio-tag">Responsive Design</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Projekt 5 — Immobilien -->
+        <div class="portfolio-card" data-category="entwicklung" data-project="5">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-immobilien-html-2026-02-14-23_18_05.png" alt="Immobilien Krause" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-home"></i>
+                </div>
+                <span class="portfolio-badge">Webentwicklung</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Immobilien Krause</h3>
+                <p class="portfolio-category">Immobilien</p>
+                <p>Elegante Makler-Website mit Objektdatenbank, Filtersuche und automatischer Exposé-Erstellung. Übersichtlich und benutzerfreundlich für Interessenten.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Objektdatenbank</span>
+                    <span class="portfolio-tag">Filterfunktion</span>
+                    <span class="portfolio-tag">Exposé-System</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Projekt 6 — Mode -->
+        <div class="portfolio-card" data-category="webdesign" data-project="6">
+            <div class="portfolio-image">
+                <img src="fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-boutique-html-2026-02-14-23_14_35.png" alt="Boutique Lena" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="portfolio-image-placeholder" style="display:none;">
+                    <div class="placeholder-pattern"></div>
+                    <i class="fi fi-rr-shop"></i>
+                </div>
+                <span class="portfolio-badge">Webdesign</span>
+            </div>
+            <div class="portfolio-content">
+                <h3>Boutique Lena</h3>
+                <p class="portfolio-category">Mode &amp; Lifestyle</p>
+                <p>Stilvolle Online-Präsenz mit Kollektionsübersicht, Lookbook und integriertem Kontaktbereich. Ein Design, das die Marke perfekt transportiert.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Lookbook</span>
+                    <span class="portfolio-tag">Kollektion</span>
+                    <span class="portfolio-tag">Markendesign</span>
+                </div>
+                <button class="portfolio-detail-btn" type="button">Mehr erfahren &rarr;</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Projekt-Detail Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <div class="modal-header" id="modalHeader">
+                <img id="modalImage" src="" alt="" style="display:none;">
+                <div class="modal-header-bg" id="modalHeaderBg">
+                    <div class="placeholder-pattern"></div>
+                    <i id="modalIcon" class="fi fi-rr-utensils"></i>
+                </div>
+                <span class="modal-badge" id="modalBadge">Webdesign</span>
+                <button class="modal-close" id="modalClose" type="button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle">Projektname</h2>
+                <p class="modal-category" id="modalCategory">Branche</p>
+                <p class="modal-description" id="modalDescription">Beschreibung</p>
+
+                <div class="modal-details" id="modalDetails">
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-icon"><i class="fi fi-rr-briefcase"></i></div>
+                        <div class="modal-detail-content">
+                            <span class="modal-detail-label">Branche</span>
+                            <span class="modal-detail-value" id="modalBranche">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-icon"><i class="fi fi-rr-time-fast"></i></div>
+                        <div class="modal-detail-content">
+                            <span class="modal-detail-label">Projektdauer</span>
+                            <span class="modal-detail-value" id="modalDauer">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-icon"><i class="fi fi-rr-layers"></i></div>
+                        <div class="modal-detail-content">
+                            <span class="modal-detail-label">Leistung</span>
+                            <span class="modal-detail-value" id="modalLeistung">-</span>
+                        </div>
+                    </div>
+                    <div class="modal-detail-item">
+                        <div class="modal-detail-icon"><i class="fi fi-rr-chart-line-up"></i></div>
+                        <div class="modal-detail-content">
+                            <span class="modal-detail-label">Ergebnis</span>
+                            <span class="modal-detail-value" id="modalErgebnis">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-highlights">
+                    <h4>Projekt-Highlights</h4>
+                    <ul id="modalHighlights"></ul>
+                </div>
+
+                <div class="modal-tags" id="modalTags"></div>
+
+                <a href="demo.html" class="modal-cta">Ähnliches Projekt starten &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="portfolio-stats">
+        <div class="portfolio-stats-container">
+            <div class="portfolio-stat-item">
+                <span class="stat-number">24+</span>
+                <div class="stat-label">Projekte umgesetzt</div>
+            </div>
+            <div class="portfolio-stat-item">
+                <span class="stat-number">18+</span>
+                <div class="stat-label">Zufriedene Kunden</div>
+            </div>
+            <div class="portfolio-stat-item">
+                <span class="stat-number">100%</span>
+                <div class="stat-label">DSGVO-konform</div>
+            </div>
+            <div class="portfolio-stat-item">
+                <span class="stat-number">14</span>
+                <div class="stat-label">Tage bis Launch</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Dein Projekt könnte das nächste sein</h2>
+            <p>Lass uns gemeinsam besprechen, wie ich auch Dein Unternehmen digital voranbringen kann.</p>
+            <a href="demo.html" class="hero-cta-button" style="background: #fff; color: #1a1a1a;">Kostenlose Demo anfordern</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Header und Footer laden
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+
+        // Portfolio Filter
+        var filterButtons = document.querySelectorAll('.filter-btn');
+        var portfolioCards = document.querySelectorAll('.portfolio-card');
+
+        filterButtons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var filter = this.getAttribute('data-filter');
+
+                filterButtons.forEach(function (b) { b.classList.remove('is-active'); });
+                this.classList.add('is-active');
+
+                portfolioCards.forEach(function (card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Projekt-Daten
+        var projectData = {
+            '1': {
+                title: 'Restaurant Zum Goldenen Hirsch',
+                category: 'Gastronomie',
+                badge: 'Webdesign',
+                icon: 'fi fi-rr-utensils',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-fotos-portfolio-demo-restaurant-html-2026-02-14-23_19_56.png',
+                description: 'Für das traditionsreiche Restaurant "Zum Goldenen Hirsch" wurde ein komplett neuer Webauftritt entwickelt. Die alte Website war veraltet und nicht mobilfähig. Das neue Design verbindet die Tradition des Hauses mit einem modernen, einladenden Look. Eine integrierte Online-Reservierung, eine digitale Speisekarte und transparente Preise machen es Gästen leicht, ihren Besuch zu planen.',
+                branche: 'Gastronomie',
+                dauer: '5 Tage',
+                leistung: 'Webdesign & Entwicklung',
+                ergebnis: '+65% Online-Reservierungen',
+                highlights: [
+                    'Vollständig responsives Design für alle Endgeräte',
+                    'Digitale Speisekarte mit saisonalen Updates',
+                    'Online-Reservierungssystem mit automatischer E-Mail-Bestätigung',
+                    'SEO-Optimierung für lokale Suchanfragen',
+                    'Google Maps Integration & Anfahrtsbeschreibung'
+                ],
+                tags: ['Responsive Design', 'Reservierungssystem', 'SEO', 'Speisekarte', 'Google Maps']
+            },
+            '2': {
+                title: 'Meisterbetrieb Schäfer',
+                category: 'Handwerk & Bau',
+                badge: 'Webentwicklung',
+                icon: 'fi fi-rr-wrench-simple',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-handwerk-html-2026-02-14-23_07_13.png',
+                description: 'Der Meisterbetrieb Schäfer brauchte eine Website, die handwerkliche Qualität auf den ersten Blick vermittelt. Die neue Seite zeigt abgeschlossene Projekte in einer professionellen Galerie mit Vorher/Nachher-Vergleichen. Ein intelligentes Kontaktformular leitet Anfragen direkt weiter und sorgt dafür, dass kein Auftrag verloren geht.',
+                branche: 'Handwerk & Bau',
+                dauer: '7 Tage',
+                leistung: 'Webentwicklung & Design',
+                ergebnis: '+40% Kundenanfragen',
+                highlights: [
+                    'Projektgalerie mit Vorher/Nachher-Vergleichen',
+                    'Intelligentes Kontaktformular mit Leistungsauswahl',
+                    'Responsive Design für alle Endgeräte',
+                    'Schnelle Ladezeiten durch optimierte Bildkompression',
+                    'Einfache Content-Pflege ohne technische Kenntnisse'
+                ],
+                tags: ['Projektgalerie', 'Kontaktformular', 'Performance', 'Responsive', 'SEO']
+            },
+            '3': {
+                title: 'Praxis Dr. Weber',
+                category: 'Gesundheit & Praxis',
+                badge: 'Webentwicklung',
+                icon: 'fi fi-rr-stethoscope',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-praxis-html-2026-02-14-23_15_44.png',
+                description: 'Für die Hausarztpraxis Dr. Weber wurde eine moderne, vertrauenswürdige Website mit integrierter Online-Terminbuchung entwickelt. Patienten können rund um die Uhr Termine buchen, erhalten automatische Bestätigungen und Erinnerungen per E-Mail. Die klare Struktur und das beruhigende Design schaffen Vertrauen schon vor dem ersten Besuch.',
+                branche: 'Gesundheit & Praxis',
+                dauer: '6 Tage',
+                leistung: 'Webentwicklung & Design',
+                ergebnis: '8+ Stunden/Woche gespart',
+                highlights: [
+                    'Online-Terminbuchung mit Kalender-Integration',
+                    'Automatische Terminerinnerungen per E-Mail',
+                    'Übersichtliche Darstellung aller Leistungen',
+                    'DSGVO-konforme Umsetzung',
+                    'Mobiloptimiert für Patienten unterwegs'
+                ],
+                tags: ['Online-Terminbuchung', 'DSGVO', 'Responsive', 'Leistungsübersicht', 'Patientenkommunikation']
+            },
+            '4': {
+                title: 'FitLife Studio',
+                category: 'Fitness & Wellness',
+                badge: 'Webdesign',
+                icon: 'fi fi-rr-dumbbell',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-fitness-html-2026-02-14-23_04_15.png',
+                description: 'FitLife Studio wollte mit einem dynamischen Webauftritt neue Mitglieder begeistern. Die Website strahlt Energie aus: Ein interaktiver Kursplan, persönliche Trainer-Profile und eine unkomplizierte Online-Anmeldung machen den Einstieg leicht. Das bold Design mit dunklem Hintergrund und neongrünen Akzenten spiegelt die Atmosphäre des Studios perfekt wider.',
+                branche: 'Fitness & Wellness',
+                dauer: '8 Tage',
+                leistung: 'Webdesign & Entwicklung',
+                ergebnis: '+50% Online-Anmeldungen',
+                highlights: [
+                    'Dynamischer Kursplan mit Wochenansicht',
+                    'Trainer-Profile mit Spezialisierungen',
+                    'Online-Mitgliedschaft & Anmeldeformular',
+                    'Energiegeladenes, motivierendes Design',
+                    'Social-Media-Integration'
+                ],
+                tags: ['Kursplan', 'Mitgliederverwaltung', 'Responsive Design', 'Social Media', 'Online-Anmeldung']
+            },
+            '5': {
+                title: 'Immobilien Krause',
+                category: 'Immobilien',
+                badge: 'Webentwicklung',
+                icon: 'fi fi-rr-home',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-immobilien-html-2026-02-14-23_18_05.png',
+                description: 'Immobilien Krause brauchte eine leistungsfähige Website, die ihr wachsendes Portfolio professionell präsentiert. Die neue Seite bietet eine Objektdatenbank mit Filtersuche, detaillierte Exposé-Ansichten und direkte Kontaktmöglichkeiten pro Objekt. Das elegante Design mit dunkelblauen Tönen und Gold-Akzenten unterstreicht die Premium-Positionierung.',
+                branche: 'Immobilien',
+                dauer: '10 Tage',
+                leistung: 'Webentwicklung & Design',
+                ergebnis: '3x schnellere Exposé-Erstellung',
+                highlights: [
+                    'Objektdatenbank mit erweiterten Filterfunktionen',
+                    'Detaillierte Exposé-Ansichten pro Immobilie',
+                    'Kontaktformular mit direkter Objekt-Zuordnung',
+                    'Interaktive Kartenansicht',
+                    'Verwaltungsbereich für einfache Objektpflege'
+                ],
+                tags: ['Objektdatenbank', 'Filterfunktion', 'Responsive', 'Kartenansicht', 'Exposé-System']
+            },
+            '6': {
+                title: 'Boutique Lena',
+                category: 'Mode & Lifestyle',
+                badge: 'Webdesign',
+                icon: 'fi fi-rr-shop',
+                image: 'fotos/portfolio/screencapture-127-0-0-1-5500-portfolio-demo-boutique-html-2026-02-14-23_14_35.png',
+                description: 'Für die Boutique Lena wurde eine stilvolle Online-Präsenz geschaffen, die das Markengefühl des Ladens ins Digitale überträgt. Ein elegantes Lookbook zeigt die aktuellen Kollektionen, während die warme Farbpalette aus Rosé und Creme die feminine Ästhetik der Boutique transportiert. Die Website stärkt die Marke und bringt neue Kunden in den Laden.',
+                branche: 'Mode & Lifestyle',
+                dauer: '5 Tage',
+                leistung: 'Webdesign & Branding',
+                ergebnis: '+45% Ladenbesuche über Web',
+                highlights: [
+                    'Lookbook mit aktuellen Kollektionen',
+                    'Elegantes, markentreues Design',
+                    'Kontaktbereich mit Anfahrt & Öffnungszeiten',
+                    'Social-Media-Integration (Instagram-Feed)',
+                    'Mobiloptimiert für unterwegs'
+                ],
+                tags: ['Lookbook', 'Kollektion', 'Markendesign', 'Social Media', 'Responsive']
+            }
+        };
+
+        // Modal Logik
+        var modal = document.getElementById('projectModal');
+        var modalCloseBtn = document.getElementById('modalClose');
+
+        function openModal(projectId) {
+            var data = projectData[projectId];
+            if (!data) return;
+
+            // Bild im Modal-Header setzen
+            var modalImg = document.getElementById('modalImage');
+            var modalHeaderBg = document.getElementById('modalHeaderBg');
+            modalImg.src = data.image;
+            modalImg.alt = data.title;
+            modalImg.style.display = '';
+            modalHeaderBg.style.display = 'none';
+            modalImg.onerror = function() {
+                this.style.display = 'none';
+                modalHeaderBg.style.display = 'flex';
+            };
+
+            document.getElementById('modalIcon').className = data.icon;
+            document.getElementById('modalBadge').textContent = data.badge;
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalCategory').textContent = data.category;
+            document.getElementById('modalDescription').textContent = data.description;
+            document.getElementById('modalBranche').textContent = data.branche;
+            document.getElementById('modalDauer').textContent = data.dauer;
+            document.getElementById('modalLeistung').textContent = data.leistung;
+            document.getElementById('modalErgebnis').textContent = data.ergebnis;
+
+            var highlightsList = document.getElementById('modalHighlights');
+            highlightsList.innerHTML = '';
+            data.highlights.forEach(function (h) {
+                var li = document.createElement('li');
+                li.textContent = h;
+                highlightsList.appendChild(li);
+            });
+
+            var tagsContainer = document.getElementById('modalTags');
+            tagsContainer.innerHTML = '';
+            data.tags.forEach(function (t) {
+                var span = document.createElement('span');
+                span.className = 'modal-tag';
+                span.textContent = t;
+                tagsContainer.appendChild(span);
+            });
+
+            modal.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('is-visible');
+            document.body.style.overflow = '';
+        }
+
+        // Buttons
+        document.querySelectorAll('.portfolio-detail-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var card = this.closest('.portfolio-card');
+                var projectId = card.getAttribute('data-project');
+                openModal(projectId);
+            });
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('is-visible')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

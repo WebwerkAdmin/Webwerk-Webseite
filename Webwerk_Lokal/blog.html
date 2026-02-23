@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog von Webwerk.ai – Tipps und Insights zu Webdesign, Webentwicklung, KI-Integration und digitaler Automatisierung für kleine und mittlere Unternehmen.">
+    <meta property="og:title" content="Blog - Webwerk AI">
+    <meta property="og:description" content="Blog von Webwerk.ai – Tipps und Insights zu Webdesign, Webentwicklung, KI-Integration und digitaler Automatisierung für kleine und mittlere Unternehmen.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/blog.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.webwerk.ai/blog.html">
+    <title>Blog - Webwerk AI</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 90%;
+        }
+
+        /* Blog Hero */
+        .blog-hero {
+            background: #f5f3f0;
+            padding: 180px 2rem 80px;
+            text-align: center;
+        }
+
+        .blog-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-hero p {
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Blog Filter */
+        .blog-filters {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            color: #666;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: #fff;
+            border-color: #1a1a1a;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            background: #f5f3f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #999;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .blog-card-tag {
+            background: #f5f3f0;
+            color: #666;
+            padding: 0.2rem 0.7rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .blog-card-content h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .blog-card-content p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-link:hover {
+            color: #6366f1;
+        }
+
+        /* Leerer Zustand */
+        .blog-empty {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .blog-empty-icon {
+            font-size: 3rem;
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-empty h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-empty p {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .blog-cta {
+            background: #f5f3f0;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .blog-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-cta h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .blog-cta p {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .blog-cta-button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .blog-cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <h1>Blog</h1>
+            <p>Praxiswissen rund um Webdesign, Entwicklung, KI und Automatisierung. Tipps und Einblicke f&uuml;r Dein digitales Wachstum.</p>
+        </div>
+    </section>
+
+    <div class="blog-filters">
+        <button class="filter-btn active" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="webdesign">Webdesign</button>
+        <button class="filter-btn" data-filter="entwicklung">Entwicklung</button>
+        <button class="filter-btn" data-filter="ki">KI & Automatisierung</button>
+        <button class="filter-btn" data-filter="business">Business-Tipps</button>
+    </div>
+
+    <!--
+    =======================================================
+    NEUEN ARTIKEL HINZUFÜGEN:
+    1. Erstelle die HTML-Datei im Ordner /blog/
+    2. Kopiere einen <a class="blog-card"> Block unten
+    3. Passe Titel, Beschreibung, Datum, data-category und Link an
+    =======================================================
+    -->
+
+    <div class="blog-grid">
+        <a href="blog/warum-jedes-unternehmen-eine-professionelle-website-braucht.html" class="blog-card" data-category="business">
+            <div class="blog-card-image">
+                <!-- Titelbild: Ersetze das <i>-Icon durch ein <img>-Tag, z.B.:
+                     <img src="fotos/blog/dein-bild.jpg" alt="Beschreibung"> -->
+                <i class="fi fi-rr-globe"></i>
+            </div>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <span class="blog-card-tag">Business-Tipps</span>
+                    <span>15. Februar 2026</span>
+                </div>
+                <h2>Warum jedes Unternehmen eine professionelle Website braucht</h2>
+                <p>5 Gr&uuml;nde, warum eine gute Online-Pr&auml;senz den Unterschied zwischen Wachstum und Stillstand macht.</p>
+                <span class="blog-card-link">Weiterlesen &rarr;</span>
+            </div>
+        </a>
+    </div>
+
+    <section class="blog-cta">
+        <div class="blog-cta-content">
+            <h2>Du hast ein konkretes Projekt?</h2>
+            <p>Lass uns gemeinsam Deine digitale L&ouml;sung entwickeln &ndash; individuell, professionell und zukunftssicher.</p>
+            <a href="index.html#kontakt" class="blog-cta-button">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+
+            // Filter-Logik
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    var filter = btn.getAttribute('data-filter');
+                    var cards = document.querySelectorAll('.blog-card');
+                    cards.forEach(function(card) {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

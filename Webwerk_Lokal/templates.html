@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professionelle Website-Templates von Webwerk.ai – Sofort einsatzbereit, modern und individuell anpassbar. Deine neue Website in wenigen Minuten.">
+    <meta property="og:title" content="Website-Templates - Webwerk AI">
+    <meta property="og:description" content="Professionelle Website-Templates von Webwerk.ai – Sofort einsatzbereit, modern und individuell anpassbar. Deine neue Website in wenigen Minuten.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/templates.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.webwerk.ai/templates.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Website-Templates",
+        "description": "Professionelle Website-Vorlagen fuer einen schnellen und guenstigen Start.",
+        "url": "https://www.webwerk.ai/templates.html",
+        "provider": {
+            "@type": "Organization",
+            "name": "Webwerk.ai",
+            "url": "https://www.webwerk.ai"
+        }
+    }
+    </script>
+    <title>Website-Templates - Webwerk AI</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=6">
+
+    <style>
+        /* Template Shop Styles */
+        .templates-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+
+        .templates-grid h2 {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .templates-grid .section-subtitle {
+            text-align: center;
+            color: #8b96a3;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .templates-filter {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: transparent;
+            color: #8b96a3;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .template-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .template-card {
+            background: #2a3441;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .template-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .template-preview {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: #1a2332;
+        }
+
+        .template-preview-inner {
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        /* Mini browser mockup */
+        .preview-browser-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .preview-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .preview-dot:nth-child(1) { background: #ff5f57; }
+        .preview-dot:nth-child(2) { background: #ffbd2e; }
+        .preview-dot:nth-child(3) { background: #28c840; }
+
+        .preview-url {
+            margin-left: 0.5rem;
+            font-size: 0.65rem;
+            color: #5a6a7a;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            flex: 1;
+        }
+
+        .preview-content {
+            flex: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Template 1 - Starter: Clean minimal */
+        .preview-starter .preview-hero-bar {
+            height: 45%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.3rem;
+            padding: 0.5rem;
+        }
+
+        .preview-starter .preview-hero-bar .ph-title {
+            width: 60%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+        }
+
+        .preview-starter .preview-hero-bar .ph-subtitle {
+            width: 40%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 3px;
+        }
+
+        .preview-starter .preview-body {
+            flex: 1;
+            background: #fff;
+            padding: 0.5rem;
+            display: flex;
+            gap: 0.4rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preview-starter .preview-body .ph-card {
+            width: 30%;
+            height: 70%;
+            background: #f3f4f6;
+            border-radius: 4px;
+        }
+
+        /* Template 2 - Business Pro: Dark professional */
+        .preview-business .preview-hero-bar {
+            height: 45%;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.8rem;
+            gap: 0.8rem;
+        }
+
+        .preview-business .preview-hero-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .preview-business .preview-hero-text .ph-title {
+            width: 80%;
+            height: 7px;
+            background: #fff;
+            border-radius: 3px;
+        }
+
+        .preview-business .preview-hero-text .ph-subtitle {
+            width: 55%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+        }
+
+        .preview-business .preview-hero-text .ph-btn {
+            width: 35%;
+            height: 10px;
+            background: linear-gradient(90deg, #6366f1, #22d3ee);
+            border-radius: 5px;
+            margin-top: 0.2rem;
+        }
+
+        .preview-business .preview-hero-img {
+            width: 35%;
+            height: 80%;
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 6px;
+        }
+
+        .preview-business .preview-body {
+            flex: 1;
+            background: #f8fafc;
+            padding: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.3rem;
+        }
+
+        .preview-business .preview-body .ph-card {
+            background: #fff;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Template 3 - Gastro: Warm restaurant */
+        .preview-gastro .preview-hero-bar {
+            height: 50%;
+            background: linear-gradient(135deg, #92400e, #b45309);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .preview-gastro .preview-hero-bar .ph-title {
+            width: 50%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 4px;
+        }
+
+        .preview-gastro .preview-hero-bar .ph-subtitle {
+            width: 30%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 3px;
+        }
+
+        .preview-gastro .preview-body {
+            flex: 1;
+            background: #fffbeb;
+            padding: 0.4rem;
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .preview-gastro .preview-body .ph-menu {
+            flex: 1;
+            background: #fef3c7;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 0.3rem;
+        }
+
+        .preview-gastro .preview-body .ph-menu .ph-line {
+            width: 80%;
+            height: 3px;
+            background: #d97706;
+            border-radius: 2px;
+            opacity: 0.4;
+        }
+
+        .preview-gastro .preview-body .ph-img {
+            width: 40%;
+            background: #fde68a;
+            border-radius: 4px;
+        }
+
+        /* Template 4 - Portfolio: Creative */
+        .preview-portfolio .preview-hero-bar {
+            height: 50%;
+            background: linear-gradient(135deg, #18181b, #27272a);
+            display: flex;
+            align-items: flex-end;
+            padding: 0.6rem;
+        }
+
+        .preview-portfolio .preview-hero-bar .ph-title {
+            width: 70%;
+            height: 10px;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .preview-portfolio .preview-body {
+            flex: 1;
+            background: #fafafa;
+            padding: 0.4rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0.25rem;
+        }
+
+        .preview-portfolio .preview-body .ph-tile {
+            border-radius: 3px;
+        }
+
+        .preview-portfolio .preview-body .ph-tile:nth-child(1) { background: #e0e7ff; }
+        .preview-portfolio .preview-body .ph-tile:nth-child(2) { background: #ddd6fe; grid-column: span 2; }
+        .preview-portfolio .preview-body .ph-tile:nth-child(3) { background: #cffafe; grid-column: span 2; }
+        .preview-portfolio .preview-body .ph-tile:nth-child(4) { background: #e0f2fe; }
+
+        .template-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .badge-popular {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: #fff;
+        }
+
+        .badge-new {
+            background: #22c55e;
+            color: #fff;
+        }
+
+        .template-info {
+            padding: 1.5rem;
+        }
+
+        .template-category {
+            font-size: 0.8rem;
+            color: #6366f1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .template-info h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .template-info p {
+            color: #8b96a3;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .template-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .template-features li {
+            font-size: 0.8rem;
+            color: #8b96a3;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .template-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .template-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-price .price-label {
+            font-size: 0.75rem;
+            color: #5a6a7a;
+            margin-bottom: 0.15rem;
+        }
+
+        .template-price .price-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .template-price .price-value span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #5a6a7a;
+        }
+
+        .template-actions {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .btn-preview {
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: transparent;
+            color: #c5d0db;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .btn-preview:hover {
+            border-color: #6366f1;
+            color: #fff;
+        }
+
+        .btn-buy {
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        /* How it works */
+        .how-it-works {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .how-it-works .section-subtitle {
+            text-align: center;
+            color: #8b96a3;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .how-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .how-step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: #2a3441;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+        }
+
+        .how-step-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(34, 211, 238, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.4rem;
+            color: #22d3ee;
+        }
+
+        .how-step h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .how-step p {
+            color: #8b96a3;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Includes section */
+        .includes-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 80px;
+        }
+
+        .includes-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .includes-section .section-subtitle {
+            text-align: center;
+            color: #8b96a3;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .includes-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #2a3441;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .includes-item i {
+            color: #22d3ee;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .includes-item h4 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .includes-item p {
+            color: #8b96a3;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Trust Elements */
+        .trust-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 80px;
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .trust-badge {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: #2a3441;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .trust-badge-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(34, 211, 238, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            font-size: 1.5rem;
+            color: #22d3ee;
+        }
+
+        .trust-badge h3 {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-badge p {
+            color: #8b96a3;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Comparison Table */
+        .compare-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 80px;
+        }
+
+        .compare-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .compare-section .section-subtitle {
+            text-align: center;
+            color: #8b96a3;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .compare-table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #2a3441;
+        }
+
+        .compare-table thead th {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .compare-table thead th:first-child {
+            width: 40%;
+        }
+
+        .compare-table thead th:nth-child(2) {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(34, 211, 238, 0.15));
+            color: #22d3ee;
+        }
+
+        .compare-table tbody td {
+            padding: 1rem 1.5rem;
+            color: #c5d0db;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .compare-table tbody td:nth-child(2) {
+            background: rgba(99, 102, 241, 0.04);
+        }
+
+        .compare-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .compare-table .compare-feature {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .compare-check {
+            color: #22c55e;
+            font-weight: 600;
+        }
+
+        .compare-x {
+            color: #5a6a7a;
+        }
+
+        .compare-table tfoot td {
+            padding: 1.2rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .compare-table tfoot .compare-cta-cell {
+            text-align: center;
+        }
+
+        .compare-cta-link {
+            display: inline-block;
+            padding: 0.6rem 1.4rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .compare-cta-template {
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: #fff;
+        }
+
+        .compare-cta-template:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .compare-cta-individual {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #c5d0db;
+        }
+
+        .compare-cta-individual:hover {
+            border-color: #6366f1;
+            color: #fff;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 80px;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-section .section-subtitle {
+            text-align: center;
+            color: #8b96a3;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            background: #2a3441;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #22d3ee;
+        }
+
+        .faq-question svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: #5a6a7a;
+        }
+
+        .faq-item.is-open .faq-question svg {
+            transform: rotate(180deg);
+            color: #22d3ee;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 1.5rem 1.2rem;
+            color: #8b96a3;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.is-open .faq-answer {
+            max-height: 300px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .template-cards {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+
+            .how-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .includes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-badges {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .compare-table thead th,
+            .compare-table tbody td,
+            .compare-table tfoot td {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .template-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .template-actions {
+                width: 100%;
+            }
+
+            .btn-preview, .btn-buy {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .template-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .how-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .includes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .templates-grid h2,
+            .how-it-works h2,
+            .includes-section h2,
+            .compare-section h2,
+            .faq-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Website-Templates – Professionell &amp; sofort einsatzbereit</h1>
+            <p>Hochwertige Website-Vorlagen, die Du selbst anpassen kannst. Modernes Design, sauberer Code und alles,
+                was Du für einen professionellen Online-Auftritt brauchst.</p>
+        </div>
+    </section>
+
+    <section class="templates-grid">
+        <h2>Wähle Dein Template</h2>
+        <p class="section-subtitle">Jedes Template ist responsiv, SEO-optimiert und sofort einsetzbar</p>
+
+        <div class="templates-filter">
+            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="gastro">Gastronomie</button>
+            <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            <button class="filter-btn" data-filter="starter">Starter</button>
+        </div>
+
+        <div class="template-cards">
+            <!-- Template 1: Starter -->
+            <div class="template-card" data-category="starter">
+                <div class="template-preview">
+                    <div class="template-preview-inner">
+                        <div class="preview-browser-bar">
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <span class="preview-url">meine-firma.de</span>
+                        </div>
+                        <div class="preview-content preview-starter">
+                            <div class="preview-hero-bar">
+                                <div class="ph-title"></div>
+                                <div class="ph-subtitle"></div>
+                            </div>
+                            <div class="preview-body">
+                                <div class="ph-card"></div>
+                                <div class="ph-card"></div>
+                                <div class="ph-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-category">Starter</div>
+                    <h3>Clean Starter</h3>
+                    <p>Perfekt für den Einstieg. Eine moderne One-Page Website mit allen wichtigen Sektionen für Dein
+                        Unternehmen.</p>
+                    <ul class="template-features">
+                        <li>One-Page</li>
+                        <li>Kontaktformular</li>
+                        <li>Responsive</li>
+                        <li>SEO-optimiert</li>
+                    </ul>
+                    <div class="template-footer">
+                        <div class="template-price">
+                            <span class="price-label">Einmaliger Preis</span>
+                            <span class="price-value">49€ <span>inkl. MwSt.</span></span>
+                        </div>
+                        <div class="template-actions">
+                            <a href="#" class="btn-preview" onclick="showPreview('starter'); return false;">
+                                <i class="fi fi-rr-eye"></i> Vorschau
+                            </a>
+                            <a href="#" class="btn-buy" onclick="buyTemplate('starter'); return false;">
+                                <i class="fi fi-rr-shopping-cart"></i> Kaufen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 2: Business Pro -->
+            <div class="template-card" data-category="business">
+                <div class="template-preview">
+                    <span class="template-badge badge-popular">Beliebt</span>
+                    <div class="template-preview-inner">
+                        <div class="preview-browser-bar">
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <span class="preview-url">business-pro.de</span>
+                        </div>
+                        <div class="preview-content preview-business">
+                            <div class="preview-hero-bar">
+                                <div class="preview-hero-text">
+                                    <div class="ph-title"></div>
+                                    <div class="ph-subtitle"></div>
+                                    <div class="ph-btn"></div>
+                                </div>
+                                <div class="preview-hero-img"></div>
+                            </div>
+                            <div class="preview-body">
+                                <div class="ph-card"></div>
+                                <div class="ph-card"></div>
+                                <div class="ph-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-category">Business</div>
+                    <h3>Business Pro</h3>
+                    <p>Die professionelle Lösung für etablierte Unternehmen. Mehrseitig, mit Leistungsübersicht, Team-Sektion und Kontakt.</p>
+                    <ul class="template-features">
+                        <li>Multi-Page</li>
+                        <li>Team-Sektion</li>
+                        <li>Leistungen</li>
+                        <li>Blog-Ready</li>
+                        <li>Kontaktformular</li>
+                    </ul>
+                    <div class="template-footer">
+                        <div class="template-price">
+                            <span class="price-label">Einmaliger Preis</span>
+                            <span class="price-value">89€ <span>inkl. MwSt.</span></span>
+                        </div>
+                        <div class="template-actions">
+                            <a href="#" class="btn-preview" onclick="showPreview('business'); return false;">
+                                <i class="fi fi-rr-eye"></i> Vorschau
+                            </a>
+                            <a href="#" class="btn-buy" onclick="buyTemplate('business'); return false;">
+                                <i class="fi fi-rr-shopping-cart"></i> Kaufen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 3: Gastro -->
+            <div class="template-card" data-category="gastro">
+                <div class="template-preview">
+                    <span class="template-badge badge-new">Neu</span>
+                    <div class="template-preview-inner">
+                        <div class="preview-browser-bar">
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <span class="preview-url">mein-restaurant.de</span>
+                        </div>
+                        <div class="preview-content preview-gastro">
+                            <div class="preview-hero-bar">
+                                <div class="ph-title"></div>
+                                <div class="ph-subtitle"></div>
+                            </div>
+                            <div class="preview-body">
+                                <div class="ph-menu">
+                                    <div class="ph-line"></div>
+                                    <div class="ph-line"></div>
+                                    <div class="ph-line"></div>
+                                    <div class="ph-line"></div>
+                                </div>
+                                <div class="ph-img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-category">Gastronomie</div>
+                    <h3>Gastro Deluxe</h3>
+                    <p>Speziell für Restaurants, Cafés und Bars. Mit Speisekarte, Reservierungsformular und Galerie für appetitliche Fotos.</p>
+                    <ul class="template-features">
+                        <li>Speisekarte</li>
+                        <li>Reservierung</li>
+                        <li>Galerie</li>
+                        <li>Öffnungszeiten</li>
+                        <li>Google Maps</li>
+                    </ul>
+                    <div class="template-footer">
+                        <div class="template-price">
+                            <span class="price-label">Einmaliger Preis</span>
+                            <span class="price-value">79€ <span>inkl. MwSt.</span></span>
+                        </div>
+                        <div class="template-actions">
+                            <a href="#" class="btn-preview" onclick="showPreview('gastro'); return false;">
+                                <i class="fi fi-rr-eye"></i> Vorschau
+                            </a>
+                            <a href="#" class="btn-buy" onclick="buyTemplate('gastro'); return false;">
+                                <i class="fi fi-rr-shopping-cart"></i> Kaufen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Template 4: Portfolio -->
+            <div class="template-card" data-category="portfolio">
+                <div class="template-preview">
+                    <div class="template-preview-inner">
+                        <div class="preview-browser-bar">
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <div class="preview-dot"></div>
+                            <span class="preview-url">mein-portfolio.de</span>
+                        </div>
+                        <div class="preview-content preview-portfolio">
+                            <div class="preview-hero-bar">
+                                <div class="ph-title"></div>
+                            </div>
+                            <div class="preview-body">
+                                <div class="ph-tile"></div>
+                                <div class="ph-tile"></div>
+                                <div class="ph-tile"></div>
+                                <div class="ph-tile"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-info">
+                    <div class="template-category">Portfolio</div>
+                    <h3>Creative Portfolio</h3>
+                    <p>Zeige Deine Arbeiten in bestem Licht. Minimalistisches Design mit Projekt-Galerie, Über-mich und Kontakt.</p>
+                    <ul class="template-features">
+                        <li>Projekt-Galerie</li>
+                        <li>Lightbox</li>
+                        <li>Über mich</li>
+                        <li>Animationen</li>
+                    </ul>
+                    <div class="template-footer">
+                        <div class="template-price">
+                            <span class="price-label">Einmaliger Preis</span>
+                            <span class="price-value">69€ <span>inkl. MwSt.</span></span>
+                        </div>
+                        <div class="template-actions">
+                            <a href="#" class="btn-preview" onclick="showPreview('portfolio'); return false;">
+                                <i class="fi fi-rr-eye"></i> Vorschau
+                            </a>
+                            <a href="#" class="btn-buy" onclick="buyTemplate('portfolio'); return false;">
+                                <i class="fi fi-rr-shopping-cart"></i> Kaufen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>So einfach funktioniert es</h2>
+        <p class="section-subtitle">In 4 Schritten zu Deiner eigenen Website</p>
+
+        <div class="how-steps">
+            <div class="how-step">
+                <div class="how-step-icon">
+                    <i class="fi fi-rr-cursor-finger"></i>
+                </div>
+                <h3>1. Template wählen</h3>
+                <p>Wähle das Template, das am besten zu Deinem Unternehmen passt. Jedes Template hat eine Live-Vorschau.</p>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step-icon">
+                    <i class="fi fi-rr-credit-card"></i>
+                </div>
+                <h3>2. Sicher bezahlen</h3>
+                <p>Bezahle sicher per Kreditkarte, PayPal oder SEPA-Lastschrift. Du erhältst sofort Zugang zum Download.</p>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step-icon">
+                    <i class="fi fi-rr-download"></i>
+                </div>
+                <h3>3. Herunterladen</h3>
+                <p>Lade das Template als ZIP-Datei herunter. Alle Dateien sind sofort einsatzbereit.</p>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step-icon">
+                    <i class="fi fi-rr-edit"></i>
+                </div>
+                <h3>4. Anpassen &amp; online gehen</h3>
+                <p>Passe Texte, Bilder und Farben an. Eine verständliche Anleitung liegt bei. Bei Fragen bin ich da.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="includes-section">
+        <h2>Das ist in jedem Template enthalten</h2>
+        <p class="section-subtitle">Kein Abo, keine versteckten Kosten – einmal kaufen, dauerhaft nutzen</p>
+
+        <div class="includes-grid">
+            <div class="includes-item">
+                <i class="fi fi-rr-code-simple"></i>
+                <div>
+                    <h4>Sauberer HTML/CSS Code</h4>
+                    <p>Valider, gut strukturierter Code, den Du einfach anpassen kannst.</p>
+                </div>
+            </div>
+            <div class="includes-item">
+                <i class="fi fi-rr-mobile-button"></i>
+                <div>
+                    <h4>Responsive Design</h4>
+                    <p>Perfekte Darstellung auf Desktop, Tablet und Smartphone.</p>
+                </div>
+            </div>
+            <div class="includes-item">
+                <i class="fi fi-rr-search-alt"></i>
+                <div>
+                    <h4>SEO-Grundoptimierung</h4>
+                    <p>Meta-Tags, semantisches HTML und schnelle Ladezeiten inklusive.</p>
+                </div>
+            </div>
+            <div class="includes-item">
+                <i class="fi fi-rr-document"></i>
+                <div>
+                    <h4>Anleitung &amp; Dokumentation</h4>
+                    <p>Schritt-für-Schritt Anleitung zum Anpassen und Hochladen.</p>
+                </div>
+            </div>
+            <div class="includes-item">
+                <i class="fi fi-rr-refresh"></i>
+                <div>
+                    <h4>Kostenlose Updates</h4>
+                    <p>Zukünftige Updates des Templates erhältst Du kostenfrei.</p>
+                </div>
+            </div>
+            <div class="includes-item">
+                <i class="fi fi-rr-headset"></i>
+                <div>
+                    <h4>E-Mail Support</h4>
+                    <p>Bei Fragen zur Einrichtung helfe ich Dir per E-Mail weiter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Elements -->
+    <section class="trust-section">
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <i class="fi fi-rr-shield-check"></i>
+                </div>
+                <h3>14 Tage Geld-zurück-Garantie</h3>
+                <p>Nicht zufrieden? Kein Problem. Innerhalb von 14 Tagen erhältst Du Dein Geld zurück – ohne Wenn und Aber.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <i class="fi fi-rr-lock"></i>
+                </div>
+                <h3>Sichere Bezahlung via Stripe</h3>
+                <p>Alle Zahlungen laufen über Stripe – verschlüsselt, PCI-konform und mit allen gängigen Zahlungsmethoden.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <i class="fi fi-rr-comment-alt"></i>
+                </div>
+                <h3>Persönlicher Support auf Deutsch</h3>
+                <p>Bei Fragen erreichst Du mich direkt per E-Mail. Ich helfe Dir persönlich – kein Bot, kein Callcenter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vergleich: Template vs. Individuell -->
+    <section class="compare-section">
+        <h2>Template oder individuelles Projekt?</h2>
+        <p class="section-subtitle">Finde heraus, welche Lösung am besten zu Dir passt</p>
+
+        <div class="compare-table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Template</th>
+                        <th>Individuelles Projekt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="compare-feature">Preis</td>
+                        <td>Ab 49 €</td>
+                        <td>Ab 499 €</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Verfügbarkeit</td>
+                        <td>Sofort nach Kauf</td>
+                        <td>Je nach Umfang 1–4 Wochen</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Design</td>
+                        <td>Professionelle Vorlage, anpassbar</td>
+                        <td>100 % nach Deinen Wünschen</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Funktionen</td>
+                        <td>Standard-Features enthalten</td>
+                        <td>Individuelle Funktionen möglich</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">SEO-Optimierung</td>
+                        <td><span class="compare-check">&#10003;</span> Grundoptimierung</td>
+                        <td><span class="compare-check">&#10003;</span> Vollständige Optimierung</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Responsive Design</td>
+                        <td><span class="compare-check">&#10003;</span></td>
+                        <td><span class="compare-check">&#10003;</span></td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Persönliche Beratung</td>
+                        <td><span class="compare-x">–</span> E-Mail-Support</td>
+                        <td><span class="compare-check">&#10003;</span> Persönliches Gespräch</td>
+                    </tr>
+                    <tr>
+                        <td class="compare-feature">Ideal für</td>
+                        <td>Schnellstarter &amp; kleine Budgets</td>
+                        <td>Unternehmen mit speziellen Anforderungen</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="compare-cta-cell">
+                            <a href="#" class="compare-cta-link compare-cta-template" onclick="document.querySelector('.templates-grid').scrollIntoView({behavior:'smooth'}); return false;">Templates ansehen</a>
+                        </td>
+                        <td class="compare-cta-cell">
+                            <a href="index.html#kontakt" class="compare-cta-link compare-cta-individual">Projekt anfragen</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>Häufig gestellte Fragen</h2>
+        <p class="section-subtitle">Alles Wichtige rund um den Template-Kauf</p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Was bekomme ich nach dem Kauf?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Du erhältst sofort nach der Bezahlung einen Download-Link per E-Mail. Darin enthalten ist eine ZIP-Datei mit allen HTML-, CSS- und JavaScript-Dateien, einer ausführlichen Anleitung und allen nötigen Ressourcen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Brauche ich technische Vorkenntnisse?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Grundlegende Computerkenntnisse reichen aus. Die mitgelieferte Anleitung erklärt Schritt für Schritt, wie Du Texte und Bilder austauschst. Für größere Anpassungen sind HTML/CSS-Grundkenntnisse hilfreich – oder Du fragst einfach bei mir an.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kann ich das Template für mehrere Websites nutzen?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Jeder Kauf berechtigt zur Nutzung für ein einzelnes Projekt (eine Domain). Möchtest Du das Template für weitere Websites verwenden, kannst Du es erneut erwerben oder mich für einen Mengenrabatt kontaktieren.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Ist Hosting im Preis enthalten?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Nein, Hosting ist nicht enthalten. Die Templates sind statische HTML-Dateien und können bei jedem beliebigen Webhoster betrieben werden – z. B. bei Strato, IONOS, All-Inkl oder Netlify. In der Anleitung findest Du Empfehlungen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Was ist, wenn mir das Template nicht gefällt?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Kein Risiko: Du hast 14 Tage Geld-zurück-Garantie. Wenn das Template nicht Deinen Erwartungen entspricht, schreib mir einfach eine E-Mail und ich erstatte den vollen Kaufpreis zurück.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Welche Zahlungsmethoden werden akzeptiert?
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Die Bezahlung erfolgt sicher über Stripe. Akzeptiert werden Kreditkarte (Visa, Mastercard, AMEX), SEPA-Lastschrift, PayPal, Google Pay und Apple Pay.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Du brauchst etwas Individuelles?</h2>
+            <p>Wenn kein Template genau passt, entwickle ich Deine Website komplett nach Deinen Vorstellungen.
+                Persönlich, maßgeschneidert und auf Augenhöhe.</p>
+            <a href="index.html#kontakt" class="hero-cta-button">Individuelles Projekt anfragen</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Component loading
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filter-btn').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                var filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.template-card').forEach(function (card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Stripe Checkout (Placeholder - replace with real Stripe Payment Links)
+        var stripeLinks = {
+            starter: '#',    // Ersetze mit: https://buy.stripe.com/dein-starter-link
+            business: '#',   // Ersetze mit: https://buy.stripe.com/dein-business-link
+            gastro: '#',     // Ersetze mit: https://buy.stripe.com/dein-gastro-link
+            portfolio: '#'   // Ersetze mit: https://buy.stripe.com/dein-portfolio-link
+        };
+
+        function buyTemplate(templateId) {
+            var link = stripeLinks[templateId];
+            if (link && link !== '#') {
+                window.location.href = link;
+            } else {
+                alert('Demo-Modus: In der Live-Version wirst Du zum sicheren Stripe-Checkout weitergeleitet.\n\nDort kannst Du per Kreditkarte, PayPal oder SEPA bezahlen und erhältst sofort den Download-Link.');
+            }
+        }
+
+        function showPreview(templateId) {
+            alert('Demo-Modus: Hier öffnet sich in der Live-Version eine vollständige Vorschau des Templates in einem neuen Tab.');
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = this.parentElement;
+                var isOpen = item.classList.contains('is-open');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item.is-open').forEach(function (openItem) {
+                    if (openItem !== item) {
+                        openItem.classList.remove('is-open');
+                    }
+                });
+
+                item.classList.toggle('is-open');
+            });
+        });
+    </script>
+</body>
+
+</html>

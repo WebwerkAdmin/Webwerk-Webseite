@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <base href="../">
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================
+         ANPASSEN: Titel, Beschreibung, URL, Datum
+         ============================================================ -->
+    <meta name="description" content="BESCHREIBUNG – Kurze Zusammenfassung des Artikels (max. 160 Zeichen).">
+    <meta property="og:title" content="TITEL - Webwerk AI Blog">
+    <meta property="og:description" content="BESCHREIBUNG – Kurze Zusammenfassung des Artikels.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/blog/DATEINAME.html">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://www.webwerk.ai/blog/DATEINAME.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "TITEL",
+        "description": "BESCHREIBUNG",
+        "url": "https://www.webwerk.ai/blog/DATEINAME.html",
+        "datePublished": "JJJJ-MM-TT",
+        "author": {
+            "@type": "Person",
+            "name": "Marcel Ulbrich"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Webwerk.ai",
+            "url": "https://www.webwerk.ai",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.webwerk.ai/og-image.png"
+            }
+        }
+    }
+    </script>
+    <title>TITEL - Webwerk AI Blog</title>
+    <!-- ============================================================ -->
+
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 90%;
+        }
+
+        .article-hero {
+            background: #f5f3f0;
+            padding: 180px 2rem 80px;
+            text-align: center;
+        }
+
+        .article-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .article-hero-tag {
+            background: #fff;
+            color: #666;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .article-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+        }
+
+        .article-hero p {
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 4rem 2rem 5rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .article-content p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+
+        .article-content li {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content strong {
+            color: #1a1a1a;
+        }
+
+        .article-content a {
+            color: #1a1a1a;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        .article-content a:hover {
+            color: #6366f1;
+        }
+
+        .article-highlight {
+            background: #f5f3f0;
+            border-left: 4px solid #1a1a1a;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .article-highlight p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .article-footer {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .article-back {
+            font-size: 0.95rem;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .article-back:hover {
+            color: #1a1a1a;
+        }
+
+        .article-cta {
+            background: #f5f3f0;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .article-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .article-cta h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .article-cta p {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .article-cta-button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .article-cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- ============================================================
+         ANPASSEN: Kategorie, Datum, Lesezeit, Titel, Untertitel
+         Kategorien: Webdesign | Entwicklung | KI & Automatisierung | Business-Tipps
+         ============================================================ -->
+    <section class="article-hero">
+        <div class="article-hero-content">
+            <div class="article-hero-meta">
+                <span class="article-hero-tag">KATEGORIE</span>
+                <span>TT. Monat JJJJ</span>
+                <span>X Min. Lesezeit</span>
+            </div>
+            <h1>TITEL</h1>
+            <p>UNTERTITEL – Kurze Einleitung, die neugierig macht.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ANPASSEN: Artikelinhalt
+         Verfügbare Elemente:
+           <h2>Zwischenüberschrift</h2>
+           <h3>Unterüberschrift</h3>
+           <p>Absatz</p>
+           <ul><li>Aufzählung</li></ul>
+           <ol><li>Nummerierte Liste</li></ol>
+           <strong>Fett</strong>
+           <em>Kursiv</em>
+           <a href="seite.html">Link</a>
+           <div class="article-highlight"><p>Hervorgehobenes Zitat</p></div>
+         ============================================================ -->
+    <article class="article-content">
+
+        <p>Einleitender Absatz – worum geht es in diesem Artikel? Warum ist das Thema relevant?</p>
+
+        <h2>Erste Zwischenüberschrift</h2>
+
+        <p>Inhalt des ersten Abschnitts.</p>
+
+        <div class="article-highlight">
+            <p>Ein hervorgehobenes Zitat oder eine wichtige Aussage.</p>
+        </div>
+
+        <h2>Zweite Zwischenüberschrift</h2>
+
+        <p>Inhalt des zweiten Abschnitts.</p>
+
+        <ul>
+            <li><strong>Punkt 1</strong> – Erklärung</li>
+            <li><strong>Punkt 2</strong> – Erklärung</li>
+            <li><strong>Punkt 3</strong> – Erklärung</li>
+        </ul>
+
+        <h2>Fazit</h2>
+
+        <p>Zusammenfassung und abschließende Gedanken.</p>
+
+    </article>
+
+    <div class="article-footer">
+        <a href="blog.html" class="article-back">&larr; Zurück zum Blog</a>
+    </div>
+
+    <!-- ============================================================
+         CTA-Bereich (optional anpassen)
+         ============================================================ -->
+    <section class="article-cta">
+        <div class="article-cta-content">
+            <h2>Bereit für Deine professionelle Website?</h2>
+            <p>Lass uns gemeinsam eine Website entwickeln, die Dein Unternehmen richtig präsentiert und Kunden gewinnt.</p>
+            <a href="demo.html" class="article-cta-button">Kostenlose Demo anfragen</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+
+</html>

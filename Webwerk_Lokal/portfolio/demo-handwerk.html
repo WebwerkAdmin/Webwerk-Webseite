@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.webwerk.ai/portfolio/demo-handwerk.html">
+    <title>Meisterbetrieb Sch&auml;fer &ndash; Sanit&auml;r &middot; Heizung &middot; Klima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            color: #2d2d2d;
+            background: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+
+        :root {
+            --primary: #2d2d2d;
+            --accent: #e87a2f;
+            --accent-hover: #d46a20;
+            --accent-light: rgba(232, 122, 47, 0.08);
+            --bg: #ffffff;
+            --bg-warm: #faf8f5;
+            --bg-dark: #1a1a1a;
+            --gray-300: #d1d1d1;
+            --gray-400: #a0a0a0;
+            --gray-500: #777;
+            --gray-600: #555;
+            --radius: 10px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.07);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           TOP BAR
+           ============================================ */
+        .topbar {
+            background: var(--bg-dark);
+            color: rgba(255,255,255,0.75);
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 44px;
+        }
+
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .topbar-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: color 0.25s ease;
+        }
+
+        .topbar-item:hover { color: #fff; }
+
+        .topbar-item i {
+            font-size: 14px;
+            color: var(--accent);
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .emergency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 5px 14px;
+            border-radius: 50px;
+        }
+
+        .emergency-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #fff;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .header {
+            background: var(--bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 78px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-mark::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .logo-mark svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .logo-sub {
+            font-size: 11.5px;
+            font-weight: 500;
+            color: var(--gray-500);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .logo-sub span { color: var(--accent); }
+
+        .nav-tabs {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            background: var(--bg-warm);
+            border-radius: 50px;
+            padding: 4px;
+        }
+
+        .nav-tabs a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            padding: 8px 20px;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-tabs a:hover {
+            color: var(--primary);
+        }
+
+        .nav-tabs a.active {
+            background: var(--bg);
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: #fff;
+            padding: 11px 24px;
+            box-shadow: 0 2px 10px rgba(232,122,47,0.25);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 4px 18px rgba(232,122,47,0.35);
+            transform: translateY(-1px);
+        }
+
+        /* ============================================
+           HERO — NUMBER ACCENT LAYOUT
+           ============================================ */
+        .hero {
+            position: relative;
+            background: var(--bg-dark);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            min-height: 560px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0 80px 0;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232,122,47,0.12);
+            border: 1px solid rgba(232,122,47,0.2);
+            color: var(--accent);
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 7px 16px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+            letter-spacing: 0.04em;
+            width: fit-content;
+        }
+
+        .hero-badge i { font-size: 14px; }
+
+        .hero h1 {
+            font-size: clamp(36px, 4.5vw, 52px);
+            color: #fff;
+            letter-spacing: -0.025em;
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span { color: var(--accent); }
+
+        .hero-sub {
+            font-size: 17px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 36px;
+            line-height: 1.65;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 14px 32px;
+            font-size: 15px;
+            border-radius: var(--radius-lg);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: #fff;
+            padding: 14px 30px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            border-radius: var(--radius-lg);
+        }
+
+        .btn-outline-light:hover {
+            border-color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.06);
+        }
+
+        /* Hero right — big year number */
+        .hero-aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 40px;
+        }
+
+        .hero-year {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(8rem, 14vw, 12rem);
+            font-weight: 700;
+            color: rgba(255,255,255,0.04);
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+
+        .hero-stats-stack {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-stat {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 22px 28px;
+            min-width: 240px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-stat:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-stat-num {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .hero-stat-num span { color: var(--accent); }
+
+        .hero-stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+        }
+
+        /* Decorative accent line */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), rgba(232,122,47,0.3) 50%, transparent);
+            z-index: 3;
+        }
+
+        /* Texture */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+            background-size: 200px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ============================================
+           SERVICES — MASTER-DETAIL LAYOUT
+           ============================================ */
+        .services {
+            padding: 90px 0 100px;
+            background: var(--bg-warm);
+        }
+
+        .services-header {
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .section-label i { font-size: 14px; }
+
+        .services-header h2 {
+            font-size: clamp(28px, 3.5vw, 38px);
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .services-header p {
+            font-size: 16px;
+            color: var(--gray-500);
+            max-width: 520px;
+            line-height: 1.65;
+        }
+
+        .services-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* Featured service (left, large) */
+        .service-featured {
+            background: var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 44px 40px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            grid-row: 1 / 3;
+        }
+
+        .service-featured::before {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(232,122,47,0.12), transparent 70%);
+            pointer-events: none;
+        }
+
+        .service-featured-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(232,122,47,0.15);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .service-featured-icon i {
+            font-size: 28px;
+            color: var(--accent);
+        }
+
+        .service-featured h3 {
+            font-size: 26px;
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        .service-featured p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 380px;
+        }
+
+        .service-featured-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 32px;
+        }
+
+        .service-featured-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .service-featured-list li i {
+            font-size: 14px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .service-featured .service-link {
+            margin-top: auto;
+            color: var(--accent);
+        }
+
+        /* Stacked service cards (right) */
+        .service-card {
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card-icon {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            background: var(--accent-light);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-card-icon {
+            background: var(--accent);
+        }
+
+        .service-card-icon i {
+            font-size: 24px;
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover .service-card-icon i {
+            color: #fff;
+        }
+
+        .service-card-text h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .service-card-text p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .service-link i {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-link:hover i {
+            transform: translateX(3px);
+        }
+
+        /* ============================================
+           PROCESS — HORIZONTAL TIMELINE
+           ============================================ */
+        .process {
+            padding: 90px 0 100px;
+            background: var(--bg);
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .process-header h2 {
+            font-size: clamp(28px, 3.5vw, 36px);
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .process-header p {
+            font-size: 16px;
+            color: var(--gray-500);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+
+        /* Connecting line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background: var(--gray-300);
+            z-index: 0;
+        }
+
+        .timeline-step {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 16px;
+        }
+
+        .timeline-num {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-step:hover .timeline-num {
+            border-color: var(--accent);
+            color: #fff;
+            background: var(--accent);
+            box-shadow: 0 6px 20px rgba(232,122,47,0.3);
+            transform: scale(1.08);
+        }
+
+        .timeline-step h4 {
+            font-size: 17px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .timeline-step p {
+            font-size: 13.5px;
+            color: var(--gray-500);
+            line-height: 1.6;
+            max-width: 200px;
+        }
+
+        /* ============================================
+           EMERGENCY CTA
+           ============================================ */
+        .emergency-cta {
+            margin: 0 24px 80px;
+        }
+
+        .emergency-card {
+            max-width: 1240px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #2a2420 100%);
+            border-radius: 20px;
+            padding: 56px 64px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-card::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232,122,47,0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .emergency-card h2 {
+            font-size: clamp(24px, 3vw, 32px);
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .emergency-card h2 span { color: var(--accent); }
+
+        .emergency-card p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.5);
+            max-width: 480px;
+            line-height: 1.65;
+        }
+
+        .emergency-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .btn-emergency {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: var(--radius-lg);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(232,122,47,0.3);
+        }
+
+        .btn-emergency:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 6px 30px rgba(232,122,47,0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-emergency i { font-size: 18px; }
+
+        .emergency-phone {
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+            text-align: right;
+        }
+
+        .emergency-phone strong {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-aside {
+                padding: 0 0 60px;
+            }
+
+            .hero-year { display: none; }
+
+            .hero-stats-stack {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .services-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .service-featured {
+                grid-row: auto;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 32px;
+                align-items: flex-start;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 36px;
+                right: auto;
+                width: 2px;
+                height: auto;
+            }
+
+            .timeline-step {
+                flex-direction: row;
+                text-align: left;
+                gap: 20px;
+                padding: 0;
+            }
+
+            .timeline-num {
+                margin-bottom: 0;
+                min-width: 72px;
+            }
+
+            .timeline-step p {
+                max-width: none;
+            }
+
+            .emergency-card {
+                grid-template-columns: 1fr;
+                padding: 40px 32px;
+                text-align: center;
+            }
+
+            .emergency-actions {
+                align-items: center;
+            }
+
+            .emergency-phone {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .topbar-left a:last-child { display: none; }
+
+            .nav-tabs { display: none; }
+
+            .header-inner { height: 66px; }
+
+            .hero-content {
+                padding: 50px 0 40px;
+            }
+
+            .hero h1 { font-size: 32px; }
+
+            .hero-stats-stack {
+                flex-direction: column;
+            }
+
+            .hero-stat { min-width: auto; }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .service-card {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topbar-right { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <a href="tel:+4961319876543" class="topbar-item">
+                    <i class="fi fi-rr-phone-call"></i>
+                    <span>06131 / 987 65 43</span>
+                </a>
+                <a href="mailto:info@meisterbetrieb-schaefer.de" class="topbar-item">
+                    <i class="fi fi-rr-envelope"></i>
+                    <span>info@meisterbetrieb-schaefer.de</span>
+                </a>
+            </div>
+            <div class="topbar-right">
+                <span class="topbar-item">
+                    <i class="fi fi-rr-clock"></i>
+                    Mo&ndash;Fr: 07:00&ndash;18:00
+                </span>
+                <div class="emergency-badge">Notdienst 24/7</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12.83 1.67a1 1 0 00-1.66 0L2.6 15.58A1 1 0 003.43 17H6v4a2 2 0 002 2h8a2 2 0 002-2v-4h2.57a1 1 0 00.83-1.42L12.83 1.67zM14 21H10v-3a2 2 0 014 0v3z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Meisterbetrieb Sch&auml;fer</span>
+                    <span class="logo-sub">Sanit&auml;r <span>&middot;</span> Heizung <span>&middot;</span> Klima</span>
+                </div>
+            </a>
+
+            <nav class="nav-tabs">
+                <a href="#" class="active">Startseite</a>
+                <a href="#">Leistungen</a>
+                <a href="#">Projekte</a>
+                <a href="#">&Uuml;ber uns</a>
+                <a href="#">Kontakt</a>
+            </nav>
+
+            <a href="#" class="btn btn-accent">
+                <i class="fi fi-rr-file-edit"></i>
+                Angebot anfordern
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fi fi-rr-shield-check"></i>
+                        Zertifizierter Meisterbetrieb seit 1998
+                    </div>
+                    <h1>Handwerk mit<br><span>Meisterqualit&auml;t</span></h1>
+                    <p class="hero-sub">
+                        Ihr Fachbetrieb f&uuml;r Sanit&auml;r, Heizung und Klimatechnik in der Region.
+                        Von der Beratung bis zur fachgerechten Umsetzung &ndash; zuverl&auml;ssig,
+                        kompetent und termingerecht.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-accent btn-hero">
+                            <i class="fi fi-rr-paper-plane"></i>
+                            Projekt anfragen
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-hero">
+                            Unsere Referenzen
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-aside">
+                    <div class="hero-year">1998</div>
+                    <div class="hero-stats-stack">
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">25<span>+</span></div>
+                            <div class="hero-stat-label">Jahre Erfahrung</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">500<span>+</span></div>
+                            <div class="hero-stat-label">Abgeschlossene Projekte</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-num">24<span>/7</span></div>
+                            <div class="hero-stat-label">Notdienst erreichbar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES — MASTER-DETAIL ==================== -->
+    <section class="services">
+        <div class="container">
+            <div class="services-header">
+                <div class="section-label">
+                    <i class="fi fi-rr-wrench-simple"></i>
+                    Unsere Leistungen
+                </div>
+                <h2>Fachgerechte L&ouml;sungen f&uuml;r Ihr Zuhause</h2>
+                <p>Von der modernen Badgestaltung bis zur energieeffizienten Heizungsanlage &ndash;
+                   alles aus einer Hand.</p>
+            </div>
+
+            <div class="services-layout">
+                <!-- Featured Service (left, large) -->
+                <div class="service-featured">
+                    <div class="service-featured-icon">
+                        <i class="fi fi-rr-water"></i>
+                    </div>
+                    <h3>Sanit&auml;rinstallation</h3>
+                    <p>
+                        Komplette Badplanung und -sanierung, Rohrleitungsbau sowie
+                        Installation modernster Sanit&auml;rtechnik. Wir verwandeln Ihr
+                        Badezimmer in eine Wohlf&uuml;hloase.
+                    </p>
+                    <ul class="service-featured-list">
+                        <li><i class="fi fi-rr-check"></i> Komplette Badsanierung</li>
+                        <li><i class="fi fi-rr-check"></i> Rohrleitungsbau &amp; Reparatur</li>
+                        <li><i class="fi fi-rr-check"></i> Barrierefreie Badgestaltung</li>
+                        <li><i class="fi fi-rr-check"></i> Moderne Sanit&auml;rtechnik</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Mehr erfahren <i class="fi fi-rr-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Stacked Cards (right) -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fi fi-rr-flame"></i>
+                    </div>
+                    <div class="service-card-text">
+                        <h3>Heizungsbau</h3>
+                        <p>
+                            Energieeffiziente Heizungsanlagen, W&auml;rmepumpen und
+                            Fu&szlig;bodenheizungen. Behagliche W&auml;rme bei niedrigen Kosten.
+                        </p>
+                        <a href="#" class="service-link">
+                            Mehr erfahren <i class="fi fi-rr-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <i class="fi fi-rr-snowflake"></i>
+                    </div>
+                    <div class="service-card-text">
+                        <h3>Klimatechnik</h3>
+                        <p>
+                            Professionelle Klimaanlagen und L&uuml;ftungssysteme f&uuml;r
+                            optimales Raumklima. Planung, Montage und Wartung.
+                        </p>
+                        <a href="#" class="service-link">
+                            Mehr erfahren <i class="fi fi-rr-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS — TIMELINE ==================== -->
+    <section class="process">
+        <div class="container">
+            <div class="process-header">
+                <div class="section-label">
+                    <i class="fi fi-rr-route"></i>
+                    So arbeiten wir
+                </div>
+                <h2>In 4 Schritten zu Ihrem Projekt</h2>
+                <p>Vom Erstgespr&auml;ch bis zur fachgerechten Umsetzung &ndash; transparent und zuverl&auml;ssig.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="timeline-num">01</div>
+                    <div>
+                        <h4>Beratung</h4>
+                        <p>Kostenlose Erstberatung vor Ort. Wir h&ouml;ren zu und verstehen Ihre W&uuml;nsche.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-num">02</div>
+                    <div>
+                        <h4>Planung</h4>
+                        <p>Detaillierter Kostenvoranschlag und ma&szlig;geschneiderte Projektplanung.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-num">03</div>
+                    <div>
+                        <h4>Umsetzung</h4>
+                        <p>Fachgerechte Ausf&uuml;hrung durch unser erfahrenes Meister-Team.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-num">04</div>
+                    <div>
+                        <h4>Abnahme</h4>
+                        <p>Gemeinsame Endabnahme und Einweisung. Ihre Zufriedenheit ist unser Anspruch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EMERGENCY CTA ==================== -->
+    <section class="emergency-cta">
+        <div class="emergency-card">
+            <div>
+                <h2>Rohrbruch? Heizungsausfall?<br><span>Wir sind sofort da.</span></h2>
+                <p>
+                    Unser Notdienst ist rund um die Uhr f&uuml;r Sie erreichbar &ndash;
+                    auch an Wochenenden und Feiertagen. Schnelle Hilfe, wenn es drauf ankommt.
+                </p>
+            </div>
+            <div class="emergency-actions">
+                <a href="tel:+4961319876543" class="btn-emergency">
+                    <i class="fi fi-rr-phone-call"></i>
+                    Jetzt anrufen
+                </a>
+                <span class="emergency-phone">
+                    <strong>06131 / 987 65 43</strong><br>
+                    24 Stunden &middot; 7 Tage
+                </span>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

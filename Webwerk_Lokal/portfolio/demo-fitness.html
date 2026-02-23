@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.webwerk.ai/portfolio/demo-fitness.html">
+    <title>FitLife Studio | Dein Fitness-Studio in Musterstadt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --lime: #a3e635;
+            --lime-dark: #84cc16;
+            --lime-glow: rgba(163, 230, 53, 0.25);
+            --bg: #0a0a0a;
+            --bg-elevated: #111111;
+            --bg-card: #161616;
+            --border: rgba(255, 255, 255, 0.06);
+            --text: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.55);
+            --text-muted: rgba(255, 255, 255, 0.35);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        img { max-width: 100%; display: block; }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            background: var(--lime);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg);
+            font-size: 1.1rem;
+        }
+
+        .logo span { color: var(--lime); }
+
+        .nav-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-pill {
+            padding: 0.5rem 1.1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            border-radius: 50px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-pill:hover {
+            color: var(--text);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .btn-glow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.5rem;
+            background: var(--lime);
+            color: var(--bg);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 24px var(--lime-glow);
+        }
+
+        .btn-glow:hover {
+            background: #b8f047;
+            box-shadow: 0 0 40px rgba(163, 230, 53, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* ===== HERO — SPLIT DIAGONAL ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 140px clamp(2rem, 5vw, 5rem) 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-right {
+            width: 42%;
+            position: relative;
+            background: var(--lime);
+            clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .hero-right-content {
+            text-align: center;
+            color: var(--bg);
+        }
+
+        .hero-right-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(5rem, 10vw, 9rem);
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            color: rgba(10, 10, 10, 0.15);
+        }
+
+        .hero-right-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--bg);
+            margin-top: 0.5rem;
+        }
+
+        .hero-right-sub {
+            font-size: 0.85rem;
+            color: rgba(10, 10, 10, 0.6);
+            margin-top: 0.3rem;
+        }
+
+        /* Grid pattern behind hero left */
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(163, 230, 53, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(163, 230, 53, 0.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, black 10%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 20% 50%, black 10%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.7s ease both;
+        }
+
+        .eyebrow-line {
+            width: 40px;
+            height: 2px;
+            background: var(--lime);
+        }
+
+        .eyebrow-text {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--lime);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6.5vw, 6rem);
+            font-weight: 900;
+            line-height: 0.92;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.7s 0.1s ease both;
+        }
+
+        .hero-title .outline-text {
+            -webkit-text-stroke: 2px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+
+        .hero-title .accent {
+            color: var(--lime);
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            max-width: 440px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: fadeInUp 0.7s 0.2s ease both;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.7s 0.3s ease both;
+        }
+
+        .btn-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2.2rem;
+            background: var(--lime);
+            color: var(--bg);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px var(--lime-glow);
+        }
+
+        .btn-hero:hover {
+            background: #b8f047;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 40px rgba(163, 230, 53, 0.4);
+        }
+
+        .btn-hero i {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-hero:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2rem;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-radius: 60px;
+            border: 1.5px solid rgba(255,255,255,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.04);
+        }
+
+        /* ===== MARQUEE STATS ===== */
+        .marquee-strip {
+            position: relative;
+            z-index: 2;
+            background: var(--bg-elevated);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+            padding: 1.2rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            animation: marquee 25s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0 2.5rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .marquee-item .num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--lime);
+        }
+
+        .marquee-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .marquee-dot {
+            width: 4px;
+            height: 4px;
+            background: var(--lime);
+            border-radius: 50%;
+            opacity: 0.4;
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ===== COURSES — BENTO GRID ===== */
+        .courses {
+            position: relative;
+            z-index: 2;
+            padding: 5rem clamp(1.5rem, 4vw, 3rem) 6rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .section-header-left {
+            max-width: 500px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--lime);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-tag i { font-size: 0.85rem; }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.02em;
+        }
+
+        .section-header-right {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            max-width: 340px;
+            text-align: right;
+            line-height: 1.65;
+        }
+
+        .bento {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1.2rem;
+        }
+
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bento-card:hover {
+            border-color: rgba(163, 230, 53, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Featured card spans 2 rows */
+        .bento-featured {
+            grid-row: 1 / 3;
+            padding: 2.5rem;
+            background: linear-gradient(160deg, rgba(163, 230, 53, 0.08) 0%, var(--bg-card) 40%);
+        }
+
+        .bento-featured .course-icon {
+            width: 72px;
+            height: 72px;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .bento-featured .course-name {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .bento-featured .course-desc {
+            font-size: 1rem;
+            max-width: 300px;
+        }
+
+        .bento-featured .course-footer {
+            margin-top: auto;
+            padding-top: 2rem;
+        }
+
+        .course-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(163, 230, 53, 0.08);
+            border: 1px solid rgba(163, 230, 53, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--lime);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover .course-icon {
+            background: rgba(163, 230, 53, 0.14);
+            border-color: rgba(163, 230, 53, 0.25);
+        }
+
+        .course-level {
+            display: inline-flex;
+            padding: 0.2rem 0.65rem;
+            background: rgba(163, 230, 53, 0.08);
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: var(--lime);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.7rem;
+        }
+
+        .course-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-desc {
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .course-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1.2rem;
+        }
+
+        .course-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .course-meta-item i {
+            color: var(--lime);
+            font-size: 0.82rem;
+        }
+
+        .course-arrow {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover .course-arrow {
+            background: var(--lime);
+            color: var(--bg);
+        }
+
+        /* ===== SCHEDULE SECTION ===== */
+        .schedule {
+            position: relative;
+            z-index: 2;
+            padding: 5rem clamp(1.5rem, 4vw, 3rem) 6rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .schedule-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .schedule-day {
+            border-right: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: background 0.3s ease;
+        }
+
+        .schedule-day:last-child { border-right: none; }
+
+        .schedule-day:hover {
+            background: var(--bg-elevated);
+        }
+
+        .schedule-day-header {
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .schedule-day-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .schedule-day-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .schedule-day.today .schedule-day-header {
+            background: rgba(163, 230, 53, 0.06);
+        }
+
+        .schedule-day.today .schedule-day-name {
+            color: var(--lime);
+        }
+
+        .schedule-slot {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .schedule-slot:last-child { border-bottom: none; }
+
+        .schedule-slot:hover {
+            background: rgba(163, 230, 53, 0.04);
+        }
+
+        .schedule-slot-time {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--lime);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+        }
+
+        .schedule-slot-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+
+        .schedule-slot-trainer {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .schedule-slot-intensity {
+            display: inline-flex;
+            gap: 3px;
+            margin-top: 0.5rem;
+        }
+
+        .intensity-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(163, 230, 53, 0.2);
+        }
+
+        .intensity-dot.active {
+            background: var(--lime);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            position: relative;
+            z-index: 2;
+            margin: 0 clamp(1.5rem, 4vw, 3rem) 4rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, rgba(163, 230, 53, 0.1) 0%, var(--bg-card) 50%, rgba(163, 230, 53, 0.05) 100%);
+            border: 1px solid rgba(163, 230, 53, 0.12);
+            border-radius: 24px;
+            padding: 4rem clamp(2rem, 5vw, 5rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(163, 230, 53, 0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-text h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.8rem;
+        }
+
+        .cta-text h2 .accent { color: var(--lime); }
+
+        .cta-text p {
+            font-size: 1rem;
+            color: var(--text-dim);
+            max-width: 440px;
+            line-height: 1.65;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .hero-left {
+                padding: 120px 2rem 3rem;
+            }
+
+            .hero-right {
+                width: 100%;
+                clip-path: none;
+                padding: 3rem 2rem;
+                flex-direction: row;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            .bento {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .bento-featured {
+                grid-row: auto;
+                grid-column: 1 / -1;
+            }
+
+            .schedule-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .schedule-day:nth-child(4),
+            .schedule-day:nth-child(5) {
+                display: none;
+            }
+
+            .cta-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-group .nav-pill { display: none; }
+
+            .hero-left { padding: 100px 1.5rem 2rem; }
+
+            .hero-right { flex-direction: column; gap: 1.5rem; }
+
+            .bento {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-header-right {
+                text-align: left;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .schedule-day:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .schedule-day:nth-child(2),
+            .schedule-day:nth-child(3) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <i class="fi fi-rr-bolt"></i>
+                </div>
+                FITLIFE<span>STUDIO</span>
+            </a>
+            <nav class="nav-group">
+                <a href="#" class="nav-pill">Start</a>
+                <a href="#" class="nav-pill">Kurse</a>
+                <a href="#" class="nav-pill">Trainer</a>
+                <a href="#" class="nav-pill">Preise</a>
+                <a href="#" class="btn-glow">
+                    Probetraining
+                    <i class="fi fi-rr-arrow-right"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO — SPLIT LAYOUT ===== -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span class="eyebrow-text">Jetzt Probetraining sichern</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="outline-text">PUSH</span><br>
+                YOUR <span class="accent">LIMITS</span>
+            </h1>
+
+            <p class="hero-desc">
+                Dein Fitness-Studio in Musterstadt. Kurse, Personal Training
+                und eine Community, die Dich weiterbringt &ndash; jeden Tag.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#" class="btn-hero">
+                    Jetzt starten
+                    <i class="fi fi-rr-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-ghost">
+                    <i class="fi fi-rr-play"></i>
+                    Studio-Tour
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-right-content">
+                <div class="hero-right-number">850+</div>
+                <div class="hero-right-label">Aktive Mitglieder</div>
+                <div class="hero-right-sub">trainieren bereits bei uns</div>
+            </div>
+            <div class="hero-right-content">
+                <div class="hero-right-number">45+</div>
+                <div class="hero-right-label">Kurse pro Woche</div>
+                <div class="hero-right-sub">von HIIT bis Yoga</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE STATS ===== -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <div class="marquee-item"><span class="num">850+</span><span class="label">Mitglieder</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">45+</span><span class="label">Kurse / Woche</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">12</span><span class="label">Erfahrene Trainer</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">6&ndash;22</span><span class="label">Uhr ge&ouml;ffnet</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">500m&sup2;</span><span class="label">Trainingsfl&auml;che</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">4.9</span><span class="label">Google Bewertung</span></div>
+            <div class="marquee-dot"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-item"><span class="num">850+</span><span class="label">Mitglieder</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">45+</span><span class="label">Kurse / Woche</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">12</span><span class="label">Erfahrene Trainer</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">6&ndash;22</span><span class="label">Uhr ge&ouml;ffnet</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">500m&sup2;</span><span class="label">Trainingsfl&auml;che</span></div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><span class="num">4.9</span><span class="label">Google Bewertung</span></div>
+            <div class="marquee-dot"></div>
+        </div>
+    </div>
+
+    <!-- ===== COURSES — BENTO GRID ===== -->
+    <section class="courses">
+        <div class="section-header">
+            <div class="section-header-left">
+                <div class="section-tag">
+                    <i class="fi fi-rr-fire-flame-curved"></i>
+                    Kursangebot
+                </div>
+                <h2 class="section-title">Finde Deinen<br>perfekten Kurs</h2>
+            </div>
+            <div class="section-header-right">
+                Von hochintensivem Intervalltraining bis zur entspannenden Yoga-Session &ndash; f&uuml;r jedes Ziel der richtige Kurs.
+            </div>
+        </div>
+
+        <div class="bento">
+            <!-- Featured Card (spans 2 rows) -->
+            <div class="bento-card bento-featured">
+                <div class="course-icon">
+                    <i class="fi fi-rr-flame"></i>
+                </div>
+                <div class="course-level">Beliebtester Kurs</div>
+                <h3 class="course-name">HIIT Power Training</h3>
+                <p class="course-desc">
+                    Unser Flaggschiff-Kurs: Hochintensives Intervalltraining, das Deine
+                    Ausdauer und Kraft auf das n&auml;chste Level bringt. Maximale
+                    Ergebnisse in minimaler Zeit &ndash; ideal f&uuml;r alle, die effizient
+                    trainieren wollen. Jede Session wird von unseren Top-Trainern angeleitet.
+                </p>
+                <div class="course-footer">
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-clock"></i>
+                            Mo, Mi, Fr
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-time-quarter-to"></i>
+                            45 Min
+                        </div>
+                    </div>
+                    <div class="course-arrow">
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bento-card">
+                <div class="course-icon">
+                    <i class="fi fi-rr-leaf"></i>
+                </div>
+                <div class="course-level">Anf&auml;nger</div>
+                <h3 class="course-name">Yoga &amp; Mobility</h3>
+                <p class="course-desc">
+                    Finde Deine innere Balance und verbessere Deine Beweglichkeit.
+                    Perfekt als Ausgleich zum intensiven Training.
+                </p>
+                <div class="course-footer">
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-clock"></i>
+                            Di, Do
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-time-quarter-to"></i>
+                            60 Min
+                        </div>
+                    </div>
+                    <div class="course-arrow">
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bento-card">
+                <div class="course-icon">
+                    <i class="fi fi-rr-gym"></i>
+                </div>
+                <div class="course-level">Fortgeschritten</div>
+                <h3 class="course-name">Krafttraining</h3>
+                <p class="course-desc">
+                    Strukturiertes Krafttraining mit professioneller Anleitung.
+                    Baue Muskeln auf und steigere Deine Leistung gezielt.
+                </p>
+                <div class="course-footer">
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-clock"></i>
+                            Mo &ndash; Fr
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-time-quarter-to"></i>
+                            60 Min
+                        </div>
+                    </div>
+                    <div class="course-arrow">
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bento-card">
+                <div class="course-icon">
+                    <i class="fi fi-rr-running"></i>
+                </div>
+                <div class="course-level">Alle Level</div>
+                <h3 class="course-name">Functional Fitness</h3>
+                <p class="course-desc">
+                    Ganzk&ouml;rpertraining mit funktionellen Bewegungen.
+                    Verbessere Koordination, Stabilit&auml;t und Alltagsfitness.
+                </p>
+                <div class="course-footer">
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-clock"></i>
+                            Mi, Sa
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-time-quarter-to"></i>
+                            50 Min
+                        </div>
+                    </div>
+                    <div class="course-arrow">
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bento-card">
+                <div class="course-icon">
+                    <i class="fi fi-rr-heart-rate"></i>
+                </div>
+                <div class="course-level">Alle Level</div>
+                <h3 class="course-name">Cardio Dance</h3>
+                <p class="course-desc">
+                    Ausdauertraining mit Spa&szlig;faktor &ndash; Tanzbewegungen
+                    treffen auf Fitness. Perfekt f&uuml;r gute Laune und Kalorienverbrauch.
+                </p>
+                <div class="course-footer">
+                    <div class="course-meta">
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-clock"></i>
+                            Di, Fr
+                        </div>
+                        <div class="course-meta-item">
+                            <i class="fi fi-rr-time-quarter-to"></i>
+                            45 Min
+                        </div>
+                    </div>
+                    <div class="course-arrow">
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WEEKLY SCHEDULE ===== -->
+    <section class="schedule">
+        <div class="schedule-header">
+            <div class="section-tag">
+                <i class="fi fi-rr-calendar"></i>
+                Kursplan
+            </div>
+            <h2 class="section-title">Diese Woche im Studio</h2>
+        </div>
+
+        <div class="schedule-grid">
+            <!-- Montag -->
+            <div class="schedule-day today">
+                <div class="schedule-day-header">
+                    <div class="schedule-day-name">Montag</div>
+                    <div class="schedule-day-date">Heute</div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">09:00</div>
+                    <div class="schedule-slot-name">Yoga Flow</div>
+                    <div class="schedule-slot-trainer">mit Lisa</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">17:00</div>
+                    <div class="schedule-slot-name">Krafttraining</div>
+                    <div class="schedule-slot-trainer">mit Tom</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">18:00</div>
+                    <div class="schedule-slot-name">HIIT Power</div>
+                    <div class="schedule-slot-trainer">mit Max</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dienstag -->
+            <div class="schedule-day">
+                <div class="schedule-day-header">
+                    <div class="schedule-day-name">Dienstag</div>
+                    <div class="schedule-day-date">Morgen</div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">10:00</div>
+                    <div class="schedule-slot-name">Yoga &amp; Mobility</div>
+                    <div class="schedule-slot-trainer">mit Sarah</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">18:00</div>
+                    <div class="schedule-slot-name">Cardio Dance</div>
+                    <div class="schedule-slot-trainer">mit Julia</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mittwoch -->
+            <div class="schedule-day">
+                <div class="schedule-day-header">
+                    <div class="schedule-day-name">Mittwoch</div>
+                    <div class="schedule-day-date">14. Feb</div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">17:00</div>
+                    <div class="schedule-slot-name">Functional Fit</div>
+                    <div class="schedule-slot-trainer">mit Max</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">18:00</div>
+                    <div class="schedule-slot-name">HIIT Power</div>
+                    <div class="schedule-slot-trainer">mit Tom</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donnerstag -->
+            <div class="schedule-day">
+                <div class="schedule-day-header">
+                    <div class="schedule-day-name">Donnerstag</div>
+                    <div class="schedule-day-date">15. Feb</div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">10:00</div>
+                    <div class="schedule-slot-name">Yoga &amp; Mobility</div>
+                    <div class="schedule-slot-trainer">mit Lisa</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">17:00</div>
+                    <div class="schedule-slot-name">Krafttraining</div>
+                    <div class="schedule-slot-trainer">mit Tom</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Freitag -->
+            <div class="schedule-day">
+                <div class="schedule-day-header">
+                    <div class="schedule-day-name">Freitag</div>
+                    <div class="schedule-day-date">16. Feb</div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">17:00</div>
+                    <div class="schedule-slot-name">Krafttraining</div>
+                    <div class="schedule-slot-trainer">mit Max</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">18:00</div>
+                    <div class="schedule-slot-name">HIIT Power</div>
+                    <div class="schedule-slot-trainer">mit Tom</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                    </div>
+                </div>
+                <div class="schedule-slot">
+                    <div class="schedule-slot-time">19:00</div>
+                    <div class="schedule-slot-name">Cardio Dance</div>
+                    <div class="schedule-slot-trainer">mit Julia</div>
+                    <div class="schedule-slot-intensity">
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot active"></span>
+                        <span class="intensity-dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2>Bereit f&uuml;r Dein <span class="accent">Probetraining</span>?</h2>
+                <p>
+                    Starte noch heute und trainiere eine Woche kostenlos bei uns.
+                    Keine Bindung, kein Risiko &ndash; nur Ergebnisse.
+                </p>
+            </div>
+            <a href="#" class="btn-hero">
+                Kostenlos testen
+                <i class="fi fi-rr-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

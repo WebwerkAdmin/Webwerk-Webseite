@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 62" width="252" height="62" role="img" aria-label="Webwerk.ai Logo">
+  <defs>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="252" height="62" rx="8" ry="8" fill="#f5f3f0"/>
+  <text x="22" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="700" letter-spacing="0.5">
+    <tspan fill="#1a1a1a">WEBWERK</tspan><tspan fill="url(#aiGradient)">.ai</tspan>
+  </text>
+</svg>

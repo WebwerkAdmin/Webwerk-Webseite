@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kostenlose Demo Deiner neuen Website – Webwerk.ai erstellt Dir einen unverbindlichen Entwurf, wie Dein moderner Online-Auftritt aussehen kann.">
+    <meta property="og:title" content="Kostenlose Website-Demo anfordern - Webwerk AI">
+    <meta property="og:description" content="Kostenlose Demo Deiner neuen Website – Webwerk.ai erstellt Dir einen unverbindlichen Entwurf, wie Dein moderner Online-Auftritt aussehen kann.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/demo.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.webwerk.ai/demo.html">
+    <title>Kostenlose Website-Demo anfordern - Webwerk AI</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="emailjs-config.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 90%;
+        }
+
+        /* Demo Page Intro */
+        .demo-intro {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 2rem;
+        }
+
+        .demo-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .demo-intro-text h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .demo-intro-text p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-intro-text .highlight {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Vorteile-Liste */
+        .demo-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0;
+        }
+
+        .demo-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .demo-benefits li .benefit-icon {
+            width: 36px;
+            height: 36px;
+            background: #3a4554;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .demo-benefits li .benefit-icon i {
+            color: #22d3ee;
+            font-size: 1rem;
+        }
+
+        /* Demo Form Section */
+        .demo-form-wrapper {
+            background: #3a4554;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-form-wrapper h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-form-wrapper .form-subtitle {
+            color: #8b96a3;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .demo-form .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .demo-form .form-group label {
+            color: #c5d0db;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .demo-form .form-group input,
+        .demo-form .form-group textarea,
+        .demo-form .form-group select {
+            padding: 0.9rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        .demo-form .form-group input::placeholder,
+        .demo-form .form-group textarea::placeholder {
+            color: #8b96a3;
+        }
+
+        .demo-form .form-group input:focus,
+        .demo-form .form-group textarea:focus,
+        .demo-form .form-group select:focus {
+            outline: none;
+            border-color: #22d3ee;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .demo-form .form-group select option {
+            background: #3a4554;
+            color: #fff;
+        }
+
+        .demo-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .demo-form .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .demo-form .checkbox-group input[type="checkbox"] {
+            margin-top: 0.3rem;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #22d3ee;
+        }
+
+        .demo-form .checkbox-group label {
+            color: #8b96a3;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .demo-form .checkbox-group a {
+            color: #22d3ee;
+            text-decoration: none;
+        }
+
+        .demo-form .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        .demo-submit-btn {
+            background: #fff;
+            color: #1a1a1a;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .demo-submit-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .demo-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .demo-form-error {
+            display: none;
+            background: rgba(220, 38, 38, 0.15);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            color: #fca5a5;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-form-error.is-visible {
+            display: block;
+        }
+
+        /* Ablauf Section */
+        .demo-process {
+            background: #f5f3f0;
+            padding: 100px 2rem;
+        }
+
+        .demo-process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-process-container h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .demo-process-container .section-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .demo-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .demo-step {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .demo-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .demo-step .step-num {
+            width: 60px;
+            height: 60px;
+            background: #3a4554;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        .demo-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .demo-step p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .demo-faq {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 0 2rem;
+        }
+
+        .demo-faq h2 {
+            font-size: 3rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 0;
+            font-family: inherit;
+        }
+
+        .faq-question .faq-toggle {
+            font-size: 1.5rem;
+            color: #999;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.is-open .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.is-open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+            padding-top: 1rem;
+        }
+
+        /* Erfolgs-Nachricht */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .form-success.is-visible {
+            display: block;
+        }
+
+        .form-success .success-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #22c55e;
+        }
+
+        .form-success h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-success p {
+            color: #c5d0db;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 4rem 2rem 2rem;
+            margin-top: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .demo-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                padding: 150px 2rem 80px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .demo-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .demo-process-container h2,
+            .demo-faq h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .demo-steps {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .demo-form .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .demo-intro-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="hero" id="demo">
+        <div class="hero-content">
+            <h1>Sieh selbst, wie Deine neue Website aussehen kann</h1>
+            <p>Ich erstelle Dir kostenfrei und unverbindlich einen Entwurf Deiner neuen Website. So kannst Du Dir vorstellen, wie Dein moderner Online-Auftritt bei Deinen Kunden wirkt.</p>
+        </div>
+    </section>
+
+    <section class="demo-intro">
+        <div class="demo-intro-grid">
+            <div class="demo-intro-text">
+                <h2>Deine Website verdient ein Upgrade</h2>
+                <p>Viele Unternehmen wissen, dass ihre Website nicht mehr zeitgemäß ist – aber der erste Schritt fühlt sich groß an. Genau dafür gibt es meine <span class="highlight">kostenlose Website-Demo</span>.</p>
+                <p>Ich schaue mir Deine aktuelle Seite an und erstelle Dir einen modernen Entwurf, der zeigt, wie Dein neuer Auftritt aussehen kann. Ohne Risiko, ohne Verpflichtung.</p>
+
+                <ul class="demo-benefits">
+                    <li>
+                        <div class="benefit-icon"><i class="fi fi-rr-check"></i></div>
+                        <span><strong>Komplett kostenfrei</strong> – Kein Haken, keine versteckten Kosten</span>
+                    </li>
+                    <li>
+                        <div class="benefit-icon"><i class="fi fi-rr-clock"></i></div>
+                        <span><strong>Schnelle Umsetzung</strong> – Dein Entwurf innerhalb weniger Tage</span>
+                    </li>
+                    <li>
+                        <div class="benefit-icon"><i class="fi fi-rr-eye"></i></div>
+                        <span><strong>Echte Vorschau</strong> – Eine Demo individuell für Dich abgestimmt</span>
+                    </li>
+                    <li>
+                        <div class="benefit-icon"><i class="fi fi-rr-handshake"></i></div>
+                        <span><strong>Unverbindlich</strong> – Du entscheidest danach, ob es weitergeht</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="demo-form-wrapper" id="demo-formular">
+                <h3>Fordere jetzt Deine Demo an </h3>
+                <p class="form-subtitle">Verrate mir etwas über Deine aktuelle Webseite und ich erstelle Dir einen Entwurf.</p>
+
+                <div class="demo-form-error" id="demoError">Es ist ein Fehler aufgetreten. Bitte versuche es erneut oder schreibe mir direkt eine E-Mail.</div>
+                <form class="demo-form" id="demoForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="demo-name">Dein Name *</label>
+                            <input type="text" id="demo-name" name="name" required placeholder="Max Mustermann">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-email">Deine E-Mail *</label>
+                            <input type="email" id="demo-email" name="email" required placeholder="max@beispiel.de">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="demo-company">Unternehmen (optional)</label>
+                            <input type="text" id="demo-company" name="company" placeholder="Dein Firmenname">
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-phone">Telefon (optional)</label>
+                            <input type="tel" id="demo-phone" name="phone" placeholder="+49 123 456789">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="demo-website">Deine aktuelle Website-URL *</label>
+                        <input type="text" id="demo-website" name="website" required placeholder="https://www.deine-seite.de">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="demo-branche">Branche *</label>
+                        <select id="demo-branche" name="branche" required>
+                            <option value="" disabled selected>Bitte auswählen</option>
+                            <option value="handwerk">Handwerk & Bau</option>
+                            <option value="gastronomie">Gastronomie & Hotellerie</option>
+                            <option value="gesundheit">Gesundheit & Praxis</option>
+                            <option value="einzelhandel">Einzelhandel & E-Commerce</option>
+                            <option value="dienstleistung">Dienstleistung & Beratung</option>
+                            <option value="immobilien">Immobilien</option>
+                            <option value="fitness">Fitness & Wellness</option>
+                            <option value="sonstiges">Sonstige Branche</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="demo-message">Was ist Dir bei Deiner neuen Website besonders wichtig? (optional)</label>
+                        <textarea id="demo-message" name="message" rows="4" placeholder="z.B. modernes Design, bessere Kundenansprache, Online-Terminbuchung ..."></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="demo-datenschutz" required>
+                        <label for="demo-datenschutz">Ich akzeptiere die Verarbeitung und Speicherung meiner Daten laut <a href="datenschutz.html">Datenschutzerklärung</a> *</label>
+                    </div>
+
+                    <button type="submit" class="demo-submit-btn">Kostenlose Demo anfordern</button>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">✓</div>
+                    <h3>Vielen Dank!</h3>
+                    <p>Deine Anfrage ist eingegangen. Ich melde mich innerhalb von 24 Stunden bei Dir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-process">
+        <div class="demo-process-container">
+            <h2>So bekommst Du Deine Demo</h2>
+            <p class="section-subtitle">In vier einfachen Schritten zu Deinem neuen Website-Entwurf</p>
+
+            <div class="demo-steps">
+                <div class="demo-step">
+                    <div class="step-num">1</div>
+                    <h3>Formular ausfüllen</h3>
+                    <p>Sag mir, wer Du bist und teile mir Deine aktuelle Website-URL mit.</p>
+                </div>
+                <div class="demo-step">
+                    <div class="step-num">2</div>
+                    <h3>Analyse</h3>
+                    <p>Ich schaue mir Deine aktuelle Website genau an und identifiziere Verbesserungspotenzial.</p>
+                </div>
+                <div class="demo-step">
+                    <div class="step-num">3</div>
+                    <h3>Entwurf erstellen</h3>
+                    <p>Ich erstelle einen individuellen Entwurf, der zeigt, wie Dein neuer Auftritt aussehen kann.</p>
+                </div>
+                <div class="demo-step">
+                    <div class="step-num">4</div>
+                    <h3>Vorstellung</h3>
+                    <p>In einem kurzen Gespräch stelle ich Dir den Entwurf vor und beantworte Deine Fragen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-faq">
+        <h2>Häufig gestellte Fragen</h2>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <span>Ist die Demo wirklich kostenlos?</span>
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Ja, die Demo ist komplett kostenfrei und unverbindlich. Du gehst keinerlei Verpflichtung ein. Ich möchte Dir einfach zeigen, was möglich ist.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <span>Wie lange dauert es, bis ich meinen Entwurf bekomme?</span>
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>In der Regel bekommst Du Deinen individuellen Entwurf innerhalb von 3-5 Werktagen nach Eingang Deiner Anfrage.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <span>Was passiert nach der Demo?</span>
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Nach der Präsentation entscheidest Du in Ruhe, ob Du mit mir zusammenarbeiten möchtest. Es gibt keinen Druck und keine automatische Vertragsbindung.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <span>Brauche ich eine bestehende Website?</span>
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Idealerweise ja, damit ich Dir zeigen kann, wie Dein verbesserter Auftritt aussehen kann. Wenn Du noch keine Website hast, kontaktiere mich direkt über das <a href="index.html#kontakt" style="color: #0066cc;">Kontaktformular</a>.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <span>Was kostet eine neue Website bei Webwerk.ai?</span>
+                <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Die Kosten hängen vom Umfang Deines Projekts ab. Nach der Demo besprechen wir transparent die Optionen und Du bekommst ein faires Angebot ohne versteckte Kosten.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Bereit für Deinen neuen Online-Auftritt?</h2>
+            <p>Fordere jetzt Deine kostenlose Demo an und überzeuge Dich selbst.</p>
+            <a href="#demo-formular" class="hero-cta-button" style="background: #fff; color: #1a1a1a;">Jetzt Demo anfordern</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Header und Footer laden
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const item = this.closest('.faq-item');
+                const isOpen = item.classList.contains('is-open');
+
+                // Alle schließen
+                document.querySelectorAll('.faq-item.is-open').forEach(function (openItem) {
+                    openItem.classList.remove('is-open');
+                });
+
+                // Aktuelles öffnen (wenn es nicht schon offen war)
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                }
+            });
+        });
+
+        // EmailJS – Demo-Formular
+        (function() {
+            emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+            var demoForm = document.getElementById('demoForm');
+            if (demoForm) {
+                demoForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    var submitBtn = demoForm.querySelector('.demo-submit-btn');
+                    var originalText = submitBtn.textContent;
+                    var errorDiv = document.getElementById('demoError');
+
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Wird gesendet...';
+                    errorDiv.classList.remove('is-visible');
+
+                    var templateParams = {
+                        name: demoForm.querySelector('#demo-name').value,
+                        email: demoForm.querySelector('#demo-email').value,
+                        company: demoForm.querySelector('#demo-company').value,
+                        phone: demoForm.querySelector('#demo-phone').value,
+                        website: demoForm.querySelector('#demo-website').value,
+                        branche: demoForm.querySelector('#demo-branche').value,
+                        message: demoForm.querySelector('#demo-message').value
+                    };
+
+                    emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.DEMO_TEMPLATE_ID, templateParams)
+                        .then(function() {
+                            demoForm.style.display = 'none';
+                            document.querySelector('.demo-form-wrapper h3').style.display = 'none';
+                            document.querySelector('.demo-form-wrapper .form-subtitle').style.display = 'none';
+                            errorDiv.style.display = 'none';
+                            document.getElementById('formSuccess').classList.add('is-visible');
+
+                            setTimeout(function() {
+                                document.getElementById('formSuccess').classList.remove('is-visible');
+                                demoForm.reset();
+                                demoForm.style.display = '';
+                                document.querySelector('.demo-form-wrapper h3').style.display = '';
+                                document.querySelector('.demo-form-wrapper .form-subtitle').style.display = '';
+                                errorDiv.style.display = '';
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = originalText;
+                            }, 4000);
+                        })
+                        .catch(function(error) {
+                            console.error('EmailJS Fehler:', error);
+                            errorDiv.classList.add('is-visible');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalText;
+                        });
+                });
+            }
+        })();
+
+        // Smooth Scroll für Anker-Links
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

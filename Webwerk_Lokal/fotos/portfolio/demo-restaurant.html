@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zum Goldenen Hirsch - Restaurant & Genuss</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2c2c2c;
+            background: #faf8f5;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ── Header ── */
+        header {
+            background: #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .logo-accent {
+            color: #c8b88a;
+        }
+
+        .logo-sub {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: all 0.25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+            background: rgba(255,255,255,0.07);
+        }
+
+        .nav-cta {
+            background: #c8b88a !important;
+            color: #1a1a1a !important;
+            font-weight: 600 !important;
+            padding: 10px 22px !important;
+            border-radius: 50px !important;
+        }
+
+        .nav-cta:hover {
+            background: #b8a67a !important;
+        }
+
+        /* ── Hero – full centered overlay ── */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(26,26,26,0.7) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.8) 100%),
+                linear-gradient(180deg, #3a2f20 0%, #5a4530 30%, #6b5540 60%, #4a3828 100%);
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200,184,138,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 0 2rem;
+        }
+
+        .hero-divider-top {
+            width: 60px;
+            height: 2px;
+            background: #c8b88a;
+            margin: 0 auto 24px;
+            border-radius: 2px;
+        }
+
+        .hero-label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #c8b88a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: #c8b88a;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            background: #c8b88a;
+            color: #1a1a1a;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(200,184,138,0.3);
+        }
+
+        .btn-primary:hover {
+            background: #d4c89e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(200,184,138,0.4);
+        }
+
+        .btn-secondary {
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.06);
+        }
+
+        /* Hero bottom stats */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #c8b88a;
+        }
+
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        /* ── About / Über uns – split section ── */
+        .about {
+            padding: 90px 0;
+            background: #fff;
+        }
+
+        .about-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #3a2f20, #5a4530);
+            border-radius: 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image i {
+            font-size: 4rem;
+            color: rgba(200,184,138,0.2);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: #c8b88a;
+            color: #1a1a1a;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .about-text {
+            max-width: 520px;
+        }
+
+        .section-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: #c8b88a;
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-label-line {
+            width: 24px;
+            height: 1.5px;
+            background: #c8b88a;
+            border-radius: 2px;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: #777;
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        .about-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #1a1a1a;
+            padding: 20px 0 20px 24px;
+            border-left: 3px solid #c8b88a;
+            margin: 24px 0;
+            line-height: 1.6;
+        }
+
+        .about-features {
+            display: flex;
+            gap: 28px;
+            margin-top: 28px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-feature-icon {
+            width: 42px;
+            height: 42px;
+            background: #faf8f5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .about-feature-icon i {
+            font-size: 1.1rem;
+            color: #c8b88a;
+        }
+
+        .about-feature span {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* ── Menu – classic dotted price lines ── */
+        .menu-section {
+            padding: 90px 0 100px;
+            background: #faf8f5;
+        }
+
+        .menu-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .menu-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .menu-header p {
+            font-size: 1.05rem;
+            color: #888;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .menu-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+        }
+
+        .menu-category h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #c8b88a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-category h3 i {
+            font-size: 1.1rem;
+            color: #c8b88a;
+        }
+
+        .menu-item {
+            margin-bottom: 24px;
+        }
+
+        .menu-item-top {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .menu-item-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            white-space: nowrap;
+        }
+
+        .menu-item-dots {
+            flex: 1;
+            border-bottom: 2px dotted #ddd;
+            min-width: 20px;
+            margin-bottom: 4px;
+        }
+
+        .menu-item-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #c8b88a;
+            white-space: nowrap;
+        }
+
+        .menu-item-desc {
+            font-size: 0.85rem;
+            color: #999;
+            line-height: 1.5;
+        }
+
+        .menu-item-badge {
+            display: inline-block;
+            background: rgba(200,184,138,0.15);
+            color: #c8b88a;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+        }
+
+        /* ── Reservation CTA ── */
+        .reservation {
+            padding: 80px 0;
+            background: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reservation::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(200,184,138,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .reservation-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .reservation-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .reservation-text h2 em {
+            color: #c8b88a;
+            font-style: italic;
+        }
+
+        .reservation-text p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .reservation-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .reservation-info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: rgba(255,255,255,0.75);
+            font-size: 0.95rem;
+        }
+
+        .reservation-info-item i {
+            font-size: 1.1rem;
+            color: #c8b88a;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Reservation form card */
+        .reservation-form {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .reservation-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .reservation-form-sub {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: #2c2c2c;
+            background: #faf8f5;
+            border: 1.5px solid #e8e4de;
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.25s ease;
+        }
+
+        .form-input:focus {
+            border-color: #c8b88a;
+        }
+
+        .form-input::placeholder {
+            color: #bbb;
+        }
+
+        .form-row-double {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .reservation-form .btn-primary {
+            width: 100%;
+            justify-content: center;
+            margin-top: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            background: #111;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .footer-logo .logo-accent {
+            color: #c8b88a;
+        }
+
+        .footer p {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .about-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                min-height: 300px;
+            }
+
+            .menu-columns {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .reservation-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .reservation-text {
+                text-align: center;
+            }
+
+            .reservation-info {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero-stats {
+                gap: 28px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-text h2 {
+                font-size: 1.9rem;
+            }
+
+            .about-features {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .menu-header h2 {
+                font-size: 2rem;
+            }
+
+            .reservation-text h2 {
+                font-size: 1.8rem;
+            }
+
+            .reservation-form {
+                padding: 28px 24px;
+            }
+
+            .form-row-double {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                Zum Goldenen <span class="logo-accent">Hirsch</span>
+                <span class="logo-sub">Restaurant & Genuss</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">Startseite</a>
+                <a href="#">Speisekarte</a>
+                <a href="#">Galerie</a>
+                <a href="#">Veranstaltungen</a>
+                <a href="#">Kontakt</a>
+                <a href="#" class="nav-cta">Tisch reservieren</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero – full centered -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-divider-top"></div>
+            <div class="hero-label">Seit 1987 in Musterstadt</div>
+
+            <h1>Tradition trifft<br><em>moderne Genusskultur</em></h1>
+
+            <p class="hero-desc">
+                Erleben Sie regionale Spezialit&auml;ten, neu interpretiert mit saisonalen Zutaten
+                aus der Region. Ein Ort, an dem Genuss und Gastfreundschaft zuhause sind.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">
+                    <i class="fi fi-rr-calendar"></i>
+                    Tisch reservieren
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fi fi-rr-document"></i>
+                    Speisekarte ansehen
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4.9 &#9733;</div>
+                    <div class="hero-stat-label">Google Bewertung</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">37+</div>
+                    <div class="hero-stat-label">Jahre Tradition</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">180+</div>
+                    <div class="hero-stat-label">Bewertungen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- &Uuml;ber uns – split section -->
+    <section class="about">
+        <div class="about-inner">
+            <div class="about-image">
+                <i class="fi fi-rr-utensils"></i>
+                <div class="about-image-badge">Seit 1987</div>
+            </div>
+
+            <div class="about-text">
+                <div class="section-label">
+                    <span class="section-label-line"></span>
+                    &Uuml;ber uns
+                </div>
+                <h2>Gastfreundschaft aus Leidenschaft</h2>
+                <p>
+                    Seit &uuml;ber drei Jahrzehnten ist der Goldene Hirsch ein Ort der Begegnung,
+                    des Genusses und der Tradition. Was als kleines Gasthaus begann, hat sich zu
+                    einem der beliebtesten Restaurants der Region entwickelt.
+                </p>
+
+                <blockquote class="about-quote">
+                    &bdquo;Gutes Essen ist nicht nur Nahrung &ndash; es ist ein Erlebnis,
+                    das Menschen zusammenbringt.&ldquo;
+                </blockquote>
+
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fi fi-rr-leaf"></i>
+                        </div>
+                        <span>Regionale Zutaten</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fi fi-rr-star"></i>
+                        </div>
+                        <span>Preisgekr&ouml;nte K&uuml;che</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fi fi-rr-glass-cheers"></i>
+                        </div>
+                        <span>Private Events</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speisekarte – classic dotted lines -->
+    <section class="menu-section">
+        <div class="menu-inner">
+            <div class="menu-header">
+                <div class="section-label">
+                    <span class="section-label-line"></span>
+                    Unsere Empfehlungen
+                    <span class="section-label-line"></span>
+                </div>
+                <h2>Aus unserer Speisekarte</h2>
+                <p>Entdecken Sie unsere saisonalen Highlights und beliebten Klassiker</p>
+            </div>
+
+            <div class="menu-columns">
+                <!-- Left column: Hauptgerichte -->
+                <div class="menu-category">
+                    <h3>
+                        <i class="fi fi-rr-utensils"></i>
+                        Hauptgerichte
+                    </h3>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">S&auml;chsischer Sauerbraten</span>
+                            <span class="menu-item-badge">Saisonal</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">18,90 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Geschmorter Rinderbraten mit Rotkohl, Kl&ouml;&szlig;en und hausgemachter So&szlig;e.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Forelle aus dem Erzgebirge</span>
+                            <span class="menu-item-badge">Empfehlung</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">22,50 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Gebraten auf Haut, mit Mandelbutter, Petersilienkartoffeln und Gurkensalat.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Wiener Schnitzel</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">19,50 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Klassisch paniert vom Kalb, mit Kartoffel-Gurkensalat und Preiselbeeren.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Geschmorte Rinderb&auml;ckchen</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">24,90 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">In Rotweinjus, mit Selleriep&uuml;ree und glasierten Karotten.</p>
+                    </div>
+                </div>
+
+                <!-- Right column: Vorspeisen & Desserts -->
+                <div class="menu-category">
+                    <h3>
+                        <i class="fi fi-rr-cherry"></i>
+                        Vorspeisen &amp; Desserts
+                    </h3>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Regionale K&auml;seplatte</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">12,90 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Auswahl regionaler K&auml;sesorten mit Feigensenf, N&uuml;ssen und Crackern.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">K&uuml;rbiscremesuppe</span>
+                            <span class="menu-item-badge">Saisonal</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">8,50 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Mit K&uuml;rbiskern&ouml;l, ger&ouml;steten Kernen und Sauerrahm.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Dresdner Eierschecke</span>
+                            <span class="menu-item-badge">Dessert</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">8,90 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Hausgemacht nach Familienrezept, mit Vanilleeis und Beerenkompott.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-top">
+                            <span class="menu-item-name">Schokoladen-Fondant</span>
+                            <span class="menu-item-dots"></span>
+                            <span class="menu-item-price">9,50 &euro;</span>
+                        </div>
+                        <p class="menu-item-desc">Mit fl&uuml;ssigem Kern, Vanilleeis und frischen Himbeeren.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation CTA -->
+    <section class="reservation">
+        <div class="reservation-inner">
+            <div class="reservation-text">
+                <h2>Reservieren Sie Ihren <em>Tisch</em></h2>
+                <p>
+                    Sichern Sie sich Ihren Platz f&uuml;r einen unvergesslichen Abend.
+                    Wir freuen uns auf Ihren Besuch im Goldenen Hirsch.
+                </p>
+                <div class="reservation-info">
+                    <div class="reservation-info-item">
+                        <i class="fi fi-rr-phone-call"></i>
+                        <span>0351 / 123 456 78</span>
+                    </div>
+                    <div class="reservation-info-item">
+                        <i class="fi fi-rr-marker"></i>
+                        <span>Marktplatz 12, 01234 Musterstadt</span>
+                    </div>
+                    <div class="reservation-info-item">
+                        <i class="fi fi-rr-clock"></i>
+                        <span>Di - So: 11:30 - 22:00 Uhr</span>
+                    </div>
+                    <div class="reservation-info-item">
+                        <i class="fi fi-rr-envelope"></i>
+                        <span>info@goldener-hirsch.de</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reservation-form">
+                <h3>Online Reservierung</h3>
+                <p class="reservation-form-sub">Wir best&auml;tigen Ihre Reservierung innerhalb von 2 Stunden.</p>
+
+                <div class="form-row form-row-double">
+                    <div>
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" placeholder="Max Mustermann">
+                    </div>
+                    <div>
+                        <label class="form-label">Personen</label>
+                        <input type="text" class="form-input" placeholder="z.B. 4">
+                    </div>
+                </div>
+                <div class="form-row form-row-double">
+                    <div>
+                        <label class="form-label">Datum</label>
+                        <input type="text" class="form-input" placeholder="z.B. 15.02.2026">
+                    </div>
+                    <div>
+                        <label class="form-label">Uhrzeit</label>
+                        <input type="text" class="form-input" placeholder="z.B. 19:00">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="form-label">Telefon oder E-Mail</label>
+                    <input type="text" class="form-input" placeholder="F&uuml;r die Best&auml;tigung">
+                </div>
+
+                <button class="btn-primary">
+                    <i class="fi fi-rr-calendar"></i>
+                    Tisch reservieren
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            Zum Goldenen <span class="logo-accent">Hirsch</span>
+        </div>
+        <p>&copy; 2026 Zum Goldenen Hirsch &middot; Restaurant & Genuss &middot; Marktplatz 12, Musterstadt &middot; Demo-Ansicht</p>
+    </footer>
+
+</body>
+
+</html>

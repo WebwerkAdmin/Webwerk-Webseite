@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <script src="cookie-consent.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHEX6Y4Q4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SHEX6Y4Q4F');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seite nicht gefunden – Die angeforderte Seite existiert nicht. Zurück zur Startseite von Webwerk.ai.">
+    <meta property="og:title" content="Seite nicht gefunden - Webwerk AI">
+    <meta property="og:description" content="Die angeforderte Seite existiert nicht. Zurück zur Startseite von Webwerk.ai.">
+    <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
+    <meta property="og:url" content="https://www.webwerk.ai/404.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.webwerk.ai/404.html">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Seite nicht gefunden - Webwerk AI</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <style>
+        .error-hero {
+            background: #f5f3f0;
+            padding: 180px 2rem 80px;
+            text-align: center;
+        }
+
+        .error-hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .error-hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .error-hero p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .error-btn-primary {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .error-btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .error-btn-secondary {
+            background: #fff;
+            color: #1a1a1a;
+            border: 1px solid #ddd;
+        }
+
+        .error-btn-secondary:hover {
+            border-color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .error-hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="error-hero">
+        <div class="error-hero-content">
+            <div class="error-code">404</div>
+            <h1>Seite nicht gefunden</h1>
+            <p>Die Seite, die Du suchst, existiert leider nicht oder wurde verschoben. Kein Problem – hier findest Du schnell zurück.</p>
+            <div class="error-actions">
+                <a href="index.html" class="error-btn error-btn-primary">Zur Startseite</a>
+                <a href="index.html#kontakt" class="error-btn error-btn-secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        function loadComponent(url, elementId) {
+            fetch(url + '?t=' + new Date().getTime())
+                .then(response => response.text())
+                .then(data => {
+                    const container = document.getElementById(elementId);
+                    container.innerHTML = data;
+
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(function (script) {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+
+                    if (elementId === 'footer-placeholder') {
+                        const yearElement = document.getElementById("current-year");
+                        if (yearElement) {
+                            yearElement.textContent = new Date().getFullYear();
+                        }
+                    }
+                })
+                .catch(error => console.error('Fehler beim Laden:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('header.html', 'header-placeholder');
+            loadComponent('footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+
+</html>
