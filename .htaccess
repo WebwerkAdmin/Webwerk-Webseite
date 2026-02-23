@@ -1,0 +1,11 @@
+# 404-Fehlerseite
+ErrorDocument 404 /404.html
+
+# HTTPS erzwingen
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# nicht-www auf www umleiten (canonical domain)
+RewriteCond %{HTTP_HOST} ^webwerk\.ai [NC]
+RewriteRule ^(.*)$ https://www.webwerk.ai/$1 [L,R=301]

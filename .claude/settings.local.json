@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(node generate-sitemap.js:*)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
