@@ -145,8 +145,6 @@ function findHtmlFiles(dir, baseDir) {
 // ============================================================
 
 function generateSitemapXml(files) {
-    const today = new Date().toISOString().split('T')[0];
-
     const urls = files.map(file => {
         let config = CONFIG[file];
         if (!config) {
@@ -158,8 +156,12 @@ function generateSitemapXml(files) {
             ? `${DOMAIN}/`
             : `${DOMAIN}/${file}`;
 
+        const stats = fs.statSync(path.join(DIR, file));
+        const lastmod = stats.mtime.toISOString().split('T')[0];
+
         return {
             loc,
+            lastmod,
             priority: config.priority,
             changefreq: config.changefreq,
             isIndex: file === 'index.html',
@@ -176,7 +178,7 @@ function generateSitemapXml(files) {
 
     const urlEntries = urls.map(u => `  <url>
     <loc>${u.loc}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`);
