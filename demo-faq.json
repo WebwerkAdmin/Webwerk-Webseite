@@ -1,0 +1,115 @@
+{
+  "section": "faq",
+  "page": "demo",
+  "heading": "Häufig gestellte Fragen",
+  "subtitle": "Alles, was Du zur Demo wissen möchtest",
+  "items": [
+    {
+      "id": "faq-demo-1",
+      "question": "Ist die Demo wirklich kostenlos?",
+      "answer": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Ja, die Demo ist komplett kostenfrei und unverbindlich. Du gehst keinerlei Verpflichtung ein. Ich möchte Dir einfach zeigen, was möglich ist."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq-demo-2",
+      "question": "Wie lange dauert es, bis ich meinen Entwurf bekomme?",
+      "answer": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "In der Regel bekommst Du Deinen individuellen Entwurf innerhalb von 3–5 Werktagen nach Eingang Deiner Anfrage."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq-demo-3",
+      "question": "Was passiert nach der Demo?",
+      "answer": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Nach der Präsentation entscheidest Du in Ruhe, ob Du mit mir zusammenarbeiten möchtest. Es gibt keinen Druck und keine automatische Vertragsbindung."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq-demo-4",
+      "question": "Brauche ich eine bestehende Website?",
+      "answer": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Idealerweise ja, damit ich Dir zeigen kann, wie Dein verbesserter Auftritt aussehen kann. Wenn Du noch keine Website hast, kontaktiere mich direkt über das "
+              },
+              {
+                "type": "text",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "index.html#kontakt",
+                      "target": "_self"
+                    }
+                  }
+                ],
+                "text": "Kontaktformular"
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq-demo-5",
+      "question": "Was kostet eine neue Website bei Webwerk.ai?",
+      "answer": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Die Kosten hängen vom Umfang Deines Projekts ab. Nach der Demo besprechen wir transparent die Optionen und Du bekommst ein faires Angebot ohne versteckte Kosten."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

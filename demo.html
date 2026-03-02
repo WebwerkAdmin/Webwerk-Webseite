@@ -334,75 +334,6 @@
             line-height: 1.6;
         }
 
-        /* FAQ Section */
-        .demo-faq {
-            max-width: 800px;
-            margin: 100px auto;
-            padding: 0 2rem;
-        }
-
-        .demo-faq h2 {
-            font-size: 3rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #e5e5e5;
-            padding: 1.5rem 0;
-        }
-
-        .faq-item:first-child {
-            border-top: 1px solid #e5e5e5;
-        }
-
-        .faq-question {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #1a1a1a;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            padding: 0;
-            font-family: inherit;
-        }
-
-        .faq-question .faq-toggle {
-            font-size: 1.5rem;
-            color: #999;
-            transition: transform 0.3s;
-            flex-shrink: 0;
-        }
-
-        .faq-item.is-open .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.is-open .faq-answer {
-            max-height: 300px;
-        }
-
-        .faq-answer p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-            padding-top: 1rem;
-        }
-
         /* Erfolgs-Nachricht */
         .form-success {
             display: none;
@@ -462,7 +393,7 @@
             }
 
             .demo-process-container h2,
-            .demo-faq h2 {
+            .faq-container h2 {
                 font-size: 2rem;
             }
         }
@@ -628,56 +559,72 @@
         </div>
     </section>
 
-    <section class="demo-faq">
-        <h2>Häufig gestellte Fragen</h2>
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2>Häufig gestellte Fragen</h2>
+            <p class="faq-subtitle">Alles, was Du zur Demo wissen möchtest</p>
+            <div class="faq-list">
 
-        <div class="faq-item">
-            <button class="faq-question" type="button">
-                <span>Ist die Demo wirklich kostenlos?</span>
-                <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Ja, die Demo ist komplett kostenfrei und unverbindlich. Du gehst keinerlei Verpflichtung ein. Ich möchte Dir einfach zeigen, was möglich ist.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Ist die Demo wirklich kostenlos?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Ja, die Demo ist komplett kostenfrei und unverbindlich. Du gehst keinerlei Verpflichtung ein. Ich möchte Dir einfach zeigen, was möglich ist.
+                        </div>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <button class="faq-question" type="button">
-                <span>Wie lange dauert es, bis ich meinen Entwurf bekomme?</span>
-                <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>In der Regel bekommst Du Deinen individuellen Entwurf innerhalb von 3-5 Werktagen nach Eingang Deiner Anfrage.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Wie lange dauert es, bis ich meinen Entwurf bekomme?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            In der Regel bekommst Du Deinen individuellen Entwurf innerhalb von 3–5 Werktagen nach Eingang Deiner Anfrage.
+                        </div>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <button class="faq-question" type="button">
-                <span>Was passiert nach der Demo?</span>
-                <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Nach der Präsentation entscheidest Du in Ruhe, ob Du mit mir zusammenarbeiten möchtest. Es gibt keinen Druck und keine automatische Vertragsbindung.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Was passiert nach der Demo?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Nach der Präsentation entscheidest Du in Ruhe, ob Du mit mir zusammenarbeiten möchtest. Es gibt keinen Druck und keine automatische Vertragsbindung.
+                        </div>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <button class="faq-question" type="button">
-                <span>Brauche ich eine bestehende Website?</span>
-                <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Idealerweise ja, damit ich Dir zeigen kann, wie Dein verbesserter Auftritt aussehen kann. Wenn Du noch keine Website hast, kontaktiere mich direkt über das <a href="index.html#kontakt" style="color: #0066cc;">Kontaktformular</a>.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Brauche ich eine bestehende Website?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Idealerweise ja, damit ich Dir zeigen kann, wie Dein verbesserter Auftritt aussehen kann. Wenn Du noch keine Website hast, kontaktiere mich direkt über das <a href="index.html#kontakt" style="color: #0066cc;">Kontaktformular</a>.
+                        </div>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <button class="faq-question" type="button">
-                <span>Was kostet eine neue Website bei Webwerk.ai?</span>
-                <span class="faq-toggle">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Die Kosten hängen vom Umfang Deines Projekts ab. Nach der Demo besprechen wir transparent die Optionen und Du bekommst ein faires Angebot ohne versteckte Kosten.</p>
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Was kostet eine neue Website bei Webwerk.ai?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Die Kosten hängen vom Umfang Deines Projekts ab. Nach der Demo besprechen wir transparent die Optionen und Du bekommst ein faires Angebot ohne versteckte Kosten.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
