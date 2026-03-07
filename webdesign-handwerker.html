@@ -19,6 +19,12 @@
     <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
     <meta property="og:url" content="https://www.webwerk.ai/webdesign-handwerker">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Webdesign für Handwerker – Website für Handwerksbetriebe | Webwerk.ai">
+    <meta name="twitter:description" content="Webdesign für Handwerker & Handwerksbetriebe – professionelle Website erstellen lassen, die bei Google gefunden wird und Auftragsanfragen bringt.">
+    <meta name="twitter:image" content="https://www.webwerk.ai/og-image.png">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.webwerk.ai/webdesign-handwerker">
     <title>Webdesign für Handwerker – Website für Handwerksbetriebe | Webwerk.ai</title>
 
@@ -29,6 +35,11 @@
         "name": "Website für Handwerker & Handwerksbetriebe",
         "description": "Professionelle Websites für Handwerker, Elektriker, Maler, Tischler, Klempner und andere Handwerksbetriebe. SEO-optimiert, mobilfreundlich und auf mehr Auftragsanfragen ausgelegt.",
         "url": "https://www.webwerk.ai/webdesign-handwerker",
+        "serviceType": "Webdesign",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Deutschland"
+        },
         "provider": {
             "@type": "Organization",
             "name": "Webwerk.ai",
@@ -85,11 +96,20 @@
                     "@type": "Answer",
                     "text": "Absolut. Gute Bewertungen sind das wichtigste Vertrauenssignal für Handwerksbetriebe. Ich binde Google-Bewertungen oder eigene Referenzen prominent auf Deiner Website ein – damit potenzielle Kunden sofort sehen, was andere über Dich sagen."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Muss ich mich um die Website kümmern, nachdem sie online ist?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nur wenn Du möchtest. Ich erkläre Dir, wie Du Texte oder Bilder selbst aktualisieren kannst – das ist einfacher als Du denkst. Wer keine Zeit dafür hat, kann mich mit der laufenden Pflege beauftragen. Du entscheidest, wie viel Du selbst machen willst."
+                }
             }
         ]
     }
     </script>
 
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css?v=5">
@@ -260,12 +280,31 @@
             }
             .hero-benefits-container {
                 flex-wrap: wrap;
-                gap: 0.5rem;
-                justify-content: flex-start;
+                gap: 0.6rem;
+                justify-content: center;
             }
-            .pain-grid,
-            .leistungen-grid {
+            .hero-benefit {
+                flex: 0 1 calc(50% - 0.3rem);
+                justify-content: center;
+            }
+            .pain-grid {
                 grid-template-columns: 1fr;
+            }
+            .leistungen-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+            .leistungen-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .leistung-card {
+                flex: 0 0 85%;
+                scroll-snap-align: start;
             }
             .handwerk-pain,
             .leistungen-handwerk,
@@ -277,10 +316,22 @@
         /* ── Responsive: Mobile (640px) ── */
         @media (max-width: 640px) {
             .hero {
-                padding: 95px 1rem 1.5rem;
+                padding: 95px 1rem 0;
+            }
+            .hero-split {
+                display: flex;
+                flex-direction: column;
+            }
+            .hero-left {
+                order: 1;
             }
             .hero-right {
-                display: none;
+                order: 2;
+                width: 100%;
+                margin-top: 1.5rem;
+            }
+            .hero-placeholder {
+                width: 100%;
             }
             .hero h1 {
                 font-size: 1.85rem;
@@ -521,7 +572,7 @@
             </div>
             <div class="hero-right">
                 <div class="hero-placeholder">
-                    <img src="fotos/sonstige/webdesign-handwerker.png" alt="Professionelle Website für Handwerker – Webwerk.ai" class="hero-mockup-img">
+                    <img src="fotos/sonstige/webdesign-handwerker.png" alt="Professionelle Website für Handwerker – Webwerk.ai" class="hero-mockup-img" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -831,7 +882,7 @@
         <div class="cta-content">
             <h2>Bereit, online mehr Aufträge zu gewinnen?</h2>
             <p>Lass uns in einem kurzen, kostenlosen Gespräch herausfinden, wie ich Deinen Handwerksbetrieb digital nach vorne bringe. Unverbindlich, unkompliziert, auf Augenhöhe.</p>
-            <a href="index.html#kontakt" class="hero-cta-button">Jetzt Gespräch vereinbaren</a>
+            <a href="/#kontakt" class="hero-cta-button">Jetzt Gespräch vereinbaren</a>
         </div>
     </section>
 
