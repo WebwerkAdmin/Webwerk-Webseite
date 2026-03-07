@@ -184,6 +184,12 @@
 
         .hero-placeholder { width: 125%; }
 
+        .cta-icon {
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
+        }
+
         .hero-mockup-img {
             width: 100%;
             height: auto;
@@ -227,35 +233,86 @@
             flex-shrink: 0;
         }
 
-        /* ── Responsive Hero ── */
-        @media (max-width: 900px) {
+        /* ── Responsive: Tablet (768px) ── */
+        @media (max-width: 768px) {
             .hero {
-                padding: 120px 1.5rem 2.5rem;
+                padding: 110px 1.5rem 2rem;
             }
             .hero-split {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            .hero h1 { font-size: 2.2rem; }
-            .hero-right { display: none; }
-            .hero-benefits-container {
-                flex-wrap: wrap;
-                gap: 0.6rem;
+            .hero-placeholder {
+                width: 100%;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            .hero-cta-secondary {
+                margin-left: 0.75rem;
             }
             .hero-benefits {
                 padding: 1.25rem 1.5rem 2rem;
             }
+            .hero-benefits-container {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: flex-start;
+            }
+            .pain-grid,
+            .leistungen-grid {
+                grid-template-columns: 1fr;
+            }
+            .handwerk-pain,
+            .leistungen-handwerk,
+            .branchen-section {
+                padding: 50px 1.5rem;
+            }
         }
 
-        @media (max-width: 600px) {
+        /* ── Responsive: Mobile (640px) ── */
+        @media (max-width: 640px) {
             .hero {
-                padding: 100px 1.25rem 2rem;
+                padding: 95px 1rem 1.5rem;
             }
-            .hero h1 { font-size: 1.85rem; }
-            .hero p { font-size: 1rem; margin-bottom: 2rem; }
-            .hero-ctas { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-            .hero-cta-secondary { margin-left: 0; }
-            .hero-benefit { font-size: 0.82rem; padding: 0.4rem 0.85rem; }
+            .hero-right {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 1.85rem;
+                line-height: 1.2;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .hero-ctas {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            .hero-cta-secondary {
+                margin-left: 0;
+            }
+            .cta-icon {
+                display: none;
+            }
+            .hero-benefits {
+                padding: 1rem 1rem 2rem;
+            }
+            .hero-benefit {
+                font-size: 0.82rem;
+                padding: 0.4rem 0.85rem;
+            }
+            .handwerk-pain,
+            .leistungen-handwerk,
+            .branchen-section {
+                padding: 40px 1rem;
+            }
         }
 
         /* ── Page Sections ── */
@@ -426,17 +483,6 @@
             font-weight: 500;
         }
 
-        @media (max-width: 600px) {
-            .pain-grid,
-            .leistungen-grid {
-                grid-template-columns: 1fr;
-            }
-            .handwerk-pain,
-            .leistungen-handwerk,
-            .branchen-section {
-                padding: 50px 1.25rem;
-            }
-        }
     </style>
     <script type="application/ld+json">
     {
@@ -469,8 +515,8 @@
                 <h1>Website für Handwerker – Mehr Aufträge durch professionelles Webdesign</h1>
                 <p>Wenn Kunden einen Elektriker, Maler oder Tischler suchen, schauen sie zuerst online. Mit einer starken Website finden sie Dich – bevor sie bei der Konkurrenz landen.</p>
                 <div class="hero-ctas">
-                    <a href="/demo" class="hero-cta-primary">✉ Kostenlose Demo anfordern</a>
-                    <a href="#leistungen" class="hero-cta-secondary">Leistungen ansehen →</a>
+                    <a href="/demo" class="hero-cta-primary"><span class="cta-icon">✉</span> Kostenlose Demo anfordern</a>
+                    <a href="#leistungen" class="hero-cta-secondary">Leistungen ansehen <span class="cta-icon">→</span></a>
                 </div>
             </div>
             <div class="hero-right">
