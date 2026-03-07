@@ -126,8 +126,8 @@ body.menu-open {
 }
 
 .nav-link:hover {
-    color: #0066cc;
-    background: rgba(0, 102, 204, 0.05);
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.05);
 }
 
 .dropdown-arrow {
@@ -690,8 +690,8 @@ body.menu-open {
 }
 
 .mobile-submenu li a:hover {
-    color: #0066cc;
-    border-left-color: #0066cc;
+    color: #6366f1;
+    border-left-color: #6366f1;
     padding-left: 1.25rem;
 }
 
@@ -956,7 +956,7 @@ body.menu-open {
 .benefit-icon {
     font-size: 3rem;
     flex-shrink: 0;
-    color: #0066cc;
+    color: #6366f1;
 }
 
 .benefit-content h3 {
@@ -1849,7 +1849,7 @@ footer {
 }
 
 .faq-question:hover {
-    color: #0066cc;
+    color: #6366f1;
 }
 
 .faq-icon {
