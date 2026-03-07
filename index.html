@@ -562,10 +562,6 @@
                 text-align: left;
             }
 
-            .hero-right {
-                order: -1;
-            }
-
             .hero-placeholder {
                 width: 100%;
             }
@@ -617,6 +613,37 @@
                 font-size: 1.25rem;
             }
 
+            /* Card Slider */
+            .features-container,
+            .service-grid,
+            .tech-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .features-container::-webkit-scrollbar,
+            .service-grid::-webkit-scrollbar,
+            .tech-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .feature-item,
+            .service-card {
+                flex: 0 0 85%;
+                scroll-snap-align: start;
+                max-width: none;
+            }
+
+            .tech-card {
+                flex: 0 0 80%;
+                scroll-snap-align: start;
+            }
+
             /* Services */
             .services {
                 padding: 40px 1.5rem 50px;
@@ -624,10 +651,6 @@
 
             .services h2 {
                 font-size: 1.75rem;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
             }
 
             .service-card h3 {
@@ -679,9 +702,10 @@
             }
 
             .hero-ctas {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.75rem;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
             }
 
             .hero-cta-secondary {
@@ -1248,10 +1272,6 @@
             .hero-split {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-            }
-
-            .hero-right {
-                order: -1;
             }
 
             .hero-placeholder {
