@@ -287,30 +287,6 @@
                 flex: 0 1 calc(50% - 0.3rem);
                 justify-content: center;
             }
-            .pain-grid {
-                grid-template-columns: 1fr;
-            }
-            .leistungen-grid {
-                display: flex;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                gap: 1rem;
-                padding-bottom: 1rem;
-            }
-            .leistungen-grid::-webkit-scrollbar {
-                display: none;
-            }
-            .leistung-card {
-                flex: 0 0 85%;
-                scroll-snap-align: start;
-            }
-            .handwerk-pain,
-            .leistungen-handwerk,
-            .branchen-section {
-                padding: 50px 1.5rem;
-            }
         }
 
         /* ── Responsive: Mobile (640px) ── */
@@ -358,11 +334,6 @@
             .hero-benefit {
                 font-size: 0.82rem;
                 padding: 0.4rem 0.85rem;
-            }
-            .handwerk-pain,
-            .leistungen-handwerk,
-            .branchen-section {
-                padding: 40px 1rem;
             }
         }
 
@@ -532,6 +503,41 @@
             font-size: 0.9rem;
             color: #333;
             font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .pain-grid {
+                grid-template-columns: 1fr;
+            }
+            .leistungen-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+            .leistungen-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .leistung-card {
+                flex: 0 0 85%;
+                scroll-snap-align: start;
+            }
+            .handwerk-pain,
+            .leistungen-handwerk,
+            .branchen-section {
+                padding: 50px 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .handwerk-pain,
+            .leistungen-handwerk,
+            .branchen-section {
+                padding: 40px 1rem;
+            }
         }
 
     </style>
