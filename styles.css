@@ -1457,6 +1457,18 @@ footer {
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .content-section h2,
+    .process-container h2,
+    .benefits-section h2,
+    .cta-section h2 {
+        font-size: 1.85rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1464,18 +1476,23 @@ footer {
         padding: 0.75rem 1rem;
     }
 
+    /* Hero */
     .hero {
         padding: 110px 1.5rem 60px;
     }
 
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
     .hero p {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .hero-cta-button {
-        font-size: 1.1rem;
-        padding: 1rem 2rem;
+        font-size: 0.95rem;
+        padding: 0.9rem 1.75rem;
     }
 
     .legal-hero {
@@ -1486,12 +1503,15 @@ footer {
         font-size: 2rem;
     }
 
+    /* Sections */
     .content-section {
-        margin: 60px auto;
+        padding: 40px 1.5rem 50px;
+        margin: 0 auto;
     }
 
     .benefits-section {
-        margin: 60px auto;
+        padding: 40px 1.5rem 50px;
+        margin: 0 auto;
     }
 
     .about-section {
@@ -1499,76 +1519,99 @@ footer {
     }
 
     .process-section {
-        padding: 60px 1.5rem;
+        padding: 40px 1.5rem 50px;
     }
 
     .faq-section {
-        padding: 60px 1.5rem;
+        padding: 40px 1.5rem;
     }
 
     .cta-section {
         padding: 50px 1.5rem;
     }
 
-    .cta-section p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
     .section-subtitle {
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .design-features {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .design-card {
-        padding: 2rem 1.5rem;
-    }
-
-    .design-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .design-icon i {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .process-steps {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .benefit-card {
-        padding: 1.75rem;
-        gap: 1.25rem;
-    }
-
-    .benefit-content h3 {
-        font-size: 1.25rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
     }
 
     .content-section h2,
     .process-container h2,
     .benefits-section h2,
     .cta-section h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    /* Design Cards – Slider */
+    .design-features {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .design-features::-webkit-scrollbar {
+        display: none;
+    }
+
+    .design-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .design-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .design-icon i {
+        font-size: 1.75rem;
+        margin-bottom: 0.9rem;
+    }
+
+    /* Process Steps – Slider */
+    .process-steps {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .process-steps::-webkit-scrollbar {
+        display: none;
+    }
+
+    .process-step {
+        flex: 0 0 72%;
+        scroll-snap-align: start;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .benefit-content h3 {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }
 
@@ -1582,7 +1625,8 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.85rem;
+        line-height: 1.2;
     }
 
     .hero p {
@@ -1590,8 +1634,8 @@ footer {
     }
 
     .hero-cta-button {
-        font-size: 1rem;
-        padding: 0.9rem 1.75rem;
+        font-size: 0.9rem;
+        padding: 0.85rem 1.5rem;
     }
 
     .legal-hero {
@@ -1599,42 +1643,55 @@ footer {
     }
 
     .legal-hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
     }
 
     .content-section {
-        padding: 0 1rem;
-        margin: 50px auto;
+        padding: 30px 1rem 40px;
+        margin: 0 auto;
     }
 
     .benefits-section {
-        padding: 0 1rem;
-        margin: 50px auto;
+        padding: 30px 1rem 40px;
+        margin: 0 auto;
     }
 
     .about-section {
         padding: 0 1rem;
-        margin: 50px auto;
+        margin: 40px auto;
     }
 
     .process-section {
-        padding: 50px 1rem;
+        padding: 30px 1rem 40px;
     }
 
     .faq-section {
-        padding: 50px 1rem;
+        padding: 30px 1rem 40px;
     }
 
     .cta-section {
         padding: 40px 1rem;
     }
 
-    .about-card {
-        padding: 2rem 1.25rem;
+    .content-section h2,
+    .process-container h2,
+    .benefits-section h2,
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .design-card {
+        flex: 0 0 88%;
+        padding: 1.5rem 1.25rem;
     }
 
     .process-step {
-        padding: 1.75rem 1.25rem;
+        flex: 0 0 80%;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .about-card {
+        padding: 2rem 1.25rem;
     }
 
     .footer-grid {
