@@ -1521,6 +1521,15 @@ footer {
         padding: 2rem 1.5rem;
     }
 
+    .design-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .design-icon i {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
     .process-steps {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -1662,7 +1671,7 @@ footer {
     }
 
     .design-card h3 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .benefit-card {

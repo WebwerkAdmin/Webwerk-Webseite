@@ -92,165 +92,281 @@
 
         .hero {
             background: #f5f3f0;
-            padding: 180px 2rem 120px;
-            text-align: center;
-            min-height: 600px;
+            padding: 160px 2rem 0px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
         }
 
-        .hero-content {
-            max-width: 900px;
+        .hero-split {
+            max-width: 1300px;
             margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-left {
+            text-align: left;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 300;
+            line-height: 1.15;
+            font-weight: 700;
             color: #1a1a1a;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
         }
 
-        .hero .cta-button {
-            font-size: 1rem;
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .hero-cta-primary {
+            background: #1a1a1a;
+            color: white;
             padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+        }
+
+        .hero-cta-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-cta-secondary {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0;
+            border-bottom: 1.5px solid #1a1a1a;
+            transition: all 0.3s;
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+        .hero-cta-secondary:hover {
+            opacity: 0.6;
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .hero-placeholder {
+            width: 125%;
+        }
+
+        .hero-mockup-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Hero Benefits Strip */
+        .hero-benefits {
+            background: #f5f3f0;
+            padding: 1.5rem 2rem 3rem;
+            border-top: 1px solid #e4e1dc;
+        }
+
+        .hero-benefits-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.88rem;
+            color: #444;
+            font-weight: 500;
+            background: #fff;
+            border: 1px solid #e4e1dc;
+            border-radius: 50px;
+            padding: 0.45rem 1rem;
+            white-space: nowrap;
+        }
+
+        .hero-benefit i {
+            font-size: 1rem;
+            color: #6366f1;
+            flex-shrink: 0;
+        }
+
+        .hero-stats {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0ddd9;
+            margin-top: 1.5rem;
+        }
+
+        .hero-stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            position: relative;
+        }
+
+        .hero-stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: #d0ccc7;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a !important;
+            background: none !important;
+            -webkit-background-clip: unset !important;
+            background-clip: unset !important;
+            -webkit-text-fill-color: #1a1a1a !important;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .hero-stat-label {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 0.2rem;
         }
 
         .features {
-            background: transparent;
+            background: #fff;
             padding: 60px 2rem 80px;
             margin-top: 0;
-            /* Kein Overlap */
             position: relative;
             z-index: 10;
         }
 
         .features-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
             justify-items: center;
         }
 
         .feature-item {
-            background: #3a4554;
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
+            background: #f7f6f4;
+            border: 1px solid #e8e5e0;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
             text-align: left;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
             width: 100%;
-            max-width: 380px;
             position: relative;
-            z-index: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .feature-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -9rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 9rem;
-            height: 7px;
-            z-index: -1;
-            background-image:
-                repeating-linear-gradient(to right,
-                    transparent 0px,
-                    transparent 6px,
-                    black 6px,
-                    black 12px),
-                linear-gradient(90deg, #3a4554, #3a4554);
-            -webkit-mask-image: repeating-linear-gradient(to right,
-                    black 0px,
-                    black 6px,
-                    transparent 6px,
-                    transparent 12px);
-            mask-image: repeating-linear-gradient(to right,
-                    black 0px,
-                    black 6px,
-                    transparent 6px,
-                    transparent 12px);
-        }
-
-        @media (max-width: 1100px) {
-            .feature-item:not(:last-child)::after {
-                display: none;
-            }
+        .feature-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-color: #d0ccc7;
         }
 
         .feature-number {
             position: absolute;
-            top: 2rem;
-            right: 2.5rem;
-            font-size: 3rem;
+            top: 1.75rem;
+            right: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             line-height: 1;
-            background: linear-gradient(90deg, #6366f1, #22d3ee);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0.3;
+            color: #e8e5e0;
         }
 
-        .feature-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
+        .feature-icon {
+            margin-bottom: 1.2rem;
         }
 
         .feature-icon i {
-            color: #ffffff;
-            font-size: 3rem;
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+            color: #6366f1;
+            font-size: 2rem;
         }
 
         .feature-item h3 {
-            font-size: 2rem;
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #fff;
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         .feature-subtitle {
             font-size: 0.9rem;
-            color: #8b96a3;
+            color: #888;
             margin-bottom: 1.2rem;
             font-weight: 400;
+            line-height: 1.6;
         }
 
         .feature-item p {
-            color: #c5d0db;
-            font-size: 1.05rem;
+            color: #555;
+            font-size: 0.95rem;
             line-height: 1.7;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             flex-grow: 1;
         }
 
         .feature-item ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 0 1.5rem;
+            flex-grow: 1;
         }
 
         .feature-item li {
-            color: #c5d0db;
-            font-size: 1rem;
+            color: #555;
+            font-size: 0.95rem;
             line-height: 1.7;
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            padding-left: 1.4rem;
             position: relative;
         }
 
@@ -258,31 +374,28 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #22d3ee;
+            color: #6366f1;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
         }
 
         .feature-link {
-            background: #1a1a1a;
-            color: white;
+            color: #1a1a1a;
             text-decoration: none;
-            font-size: 1.3rem;
-            display: flex;
+            font-size: 0.95rem;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem;
-            border-radius: 8px;
-            transition: all 0.3s;
+            gap: 0.4rem;
             font-weight: 500;
-            width: 100%;
             margin-top: auto;
+            border-bottom: 1.5px solid #1a1a1a;
+            padding-bottom: 0.15rem;
+            transition: all 0.3s;
+            align-self: flex-start;
         }
 
         .feature-link:hover {
-            background: #333;
-            gap: 0.8rem;
+            opacity: 0.6;
         }
 
         @media (max-width: 1100px) {
@@ -297,42 +410,46 @@
             }
         }
 
+        .services-section {
+            background: #fff;
+        }
+
         .services {
-            max-width: 1400px;
-            margin: 100px auto;
-            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 2rem 80px;
         }
 
         .services h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             color: #1a1a1a;
             text-align: center;
         }
 
         .services-subtitle {
-            font-size: 1.25rem;
-            color: #666;
-            margin-bottom: 4rem;
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 2.5rem;
             text-align: center;
         }
 
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
             justify-items: center;
         }
 
         .service-card {
-            background: #3a4554;
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
+            background: #f7f6f4;
+            border: 1px solid #e8e5e0;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
             width: 100%;
-            max-width: 380px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -340,66 +457,66 @@
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-color: #d0ccc7;
         }
 
         .service-number {
             position: absolute;
-            top: 2rem;
-            right: 2.5rem;
-            font-size: 3rem;
+            top: 1.75rem;
+            right: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             line-height: 1;
-            background: linear-gradient(90deg, #6366f1, #22d3ee);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0.3;
+            color: #e8e5e0;
+        }
+
+        .service-icon {
+            margin-bottom: 1.2rem;
         }
 
         .service-icon i {
-            color: #ffffff;
-            font-size: 3rem;
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-            margin-bottom: 1rem;
+            color: #6366f1;
+            font-size: 2rem;
         }
 
         .service-card h3 {
-            font-size: 2rem;
+            font-size: 1.4rem;
             margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #FFFFFF;
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         .service-subtitle {
             font-size: 0.9rem;
-            color: #8b96a3;
+            color: #888;
             margin-bottom: 1.2rem;
             font-weight: 400;
+            line-height: 1.6;
         }
 
         .service-card p {
-            color: #c5d0db;
-            font-size: 1.05rem;
+            color: #555;
+            font-size: 0.95rem;
             line-height: 1.7;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.5rem;
             flex-grow: 1;
         }
 
         .service-card ul {
             list-style: none;
             padding: 0;
-            margin: 0 0 1.8rem 0;
+            margin: 0 0 1.5rem 0;
             flex-grow: 1;
         }
 
         .service-card li {
-            color: #c5d0db;
-            font-size: 1rem;
+            color: #555;
+            font-size: 0.95rem;
             line-height: 1.7;
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            padding-left: 1.4rem;
             position: relative;
         }
 
@@ -407,37 +524,96 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #22d3ee;
+            color: #6366f1;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
         }
 
         .service-link {
-            background: #1a1a1a;
-            color: white;
+            color: #1a1a1a;
             text-decoration: none;
-            font-size: 1.3rem;
-            display: flex;
+            font-size: 0.95rem;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem;
-            border-radius: 8px;
-            transition: all 0.3s;
+            gap: 0.4rem;
             font-weight: 500;
-            width: 100%;
             margin-top: auto;
+            border-bottom: 1.5px solid #1a1a1a;
+            padding-bottom: 0.15rem;
+            transition: all 0.3s;
+            align-self: flex-start;
         }
 
         .service-link:hover {
-            background: #333;
-            gap: 0.8rem;
+            opacity: 0.6;
         }
 
 
         @media (max-width: 768px) {
+            .hero {
+                padding: 110px 1.5rem 60px;
+            }
+
+            .hero-split {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .hero-right {
+                order: -1;
+            }
+
+            .hero-placeholder {
+                width: 100%;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-benefits-container {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .features {
+                padding: 40px 1.5rem 50px;
+            }
+
+            .feature-item {
+                padding: 2rem 1.5rem;
+                max-width: 100%;
+            }
+
+            .feature-item h3 {
+                font-size: 1.5rem;
+            }
+
+            .feature-icon i {
+                font-size: 2.2rem;
+            }
+
+            .feature-link {
+                font-size: 1rem;
+                padding: 0.85rem;
+            }
+
+            .services {
+                margin: 50px auto;
+            }
+
+            .services h2 {
+                font-size: 2rem;
+            }
+
+            .services-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2.5rem;
             }
 
             .service-grid {
@@ -445,130 +621,170 @@
                 max-width: 500px;
                 margin: 0 auto;
             }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+                max-width: 100%;
+            }
+
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-icon i {
+                font-size: 2.2rem;
+            }
+
+            .service-link {
+                font-size: 1rem;
+                padding: 0.85rem;
+            }
+
+            .stats-section {
+                padding: 50px 1.5rem;
+            }
+
+            .stats-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .tech-features {
+                padding: 40px 1.5rem;
+            }
+
+            .tech-container h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .contact-section {
+                padding: 60px 1.5rem;
+            }
+
+            .contact-left h2 {
+                font-size: 2rem;
+            }
+
+            .contact-left h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 95px 1rem 50px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-benefit span {
+                font-size: 0.88rem;
+            }
+
+            .feature-item {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .feature-item h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .contact-section {
+                padding: 50px 1rem;
+            }
         }
 
         .tech-features {
-            background: #f5f3f0;
-            padding: 50px 2rem;
+            background: #f7f6f4;
+            padding: 60px 2rem 80px;
             text-align: center;
         }
 
         .tech-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .tech-container h2 {
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            font-weight: 500;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
             color: #1a1a1a;
         }
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
             margin-bottom: 3rem;
         }
 
         .tech-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
+            background: #fff;
+            border: 1px solid #e8e5e0;
+            padding: 1.75rem 1.5rem;
+            border-radius: 16px;
             display: flex;
             align-items: flex-start;
-            gap: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            gap: 1.25rem;
+            transition: all 0.3s;
             text-align: left;
         }
 
         .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-color: #d0ccc7;
         }
 
         .tech-icon {
-            font-size: 2.5rem;
-            /* Größer für bessere Sichtbarkeit */
+            font-size: 1.6rem;
             flex-shrink: 0;
-            color: #0066cc;
-            /* Einheitliche Farbe statt Emojis */
+            color: #6366f1;
         }
 
         .tech-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
             color: #1a1a1a;
         }
 
         .tech-content p {
             color: #666;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            line-height: 1.55;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .tech-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Hero Section Override */
-        .hero {
-            background: #f5f3f0;
-            padding: 180px 2rem 120px;
-            text-align: center;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-            font-weight: 500;
-            color: #1a1a1a;
-            letter-spacing: -0.02em;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: #666;
-            margin-bottom: 3rem;
-            line-height: 1.7;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta-button {
-            background: #1a1a1a;
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.3rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.7rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .hero-cta-button:hover {
-            background: #333;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        @media (max-width: 600px) {
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Stats Section */
@@ -667,7 +883,7 @@
         }
 
         .contact-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -675,9 +891,9 @@
         }
 
         .contact-left h2 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             color: #1a1a1a;
         }
 
@@ -738,7 +954,7 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #0066cc;
+            border-color: #6366f1;
         }
 
         .checkbox-group label {
@@ -754,7 +970,7 @@
         }
 
         .checkbox-group a {
-            color: #0066cc;
+            color: #6366f1;
         }
 
         .checkbox-options {
@@ -783,16 +999,19 @@
             color: white;
             padding: 1rem 2rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
             width: fit-content;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .submit-btn:hover {
             background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
         }
 
         .submit-btn:disabled {
@@ -907,9 +1126,10 @@
         }
 
         .steps h4 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
-            font-weight: 500;
+            font-weight: 600;
+            color: white;
         }
 
         .step-item {
@@ -923,13 +1143,15 @@
             width: 32px;
             height: 32px;
             background: rgba(255, 255, 255, 0.1);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 500;
+            font-weight: 600;
             flex-shrink: 0;
             margin-top: 0.2rem;
+            font-size: 0.9rem;
         }
 
         .step-content {
@@ -956,7 +1178,7 @@
 
         @media (max-width: 968px) {
             .hero {
-                padding: 150px 2rem 80px;
+                padding: 130px 1.5rem 70px;
                 min-height: auto;
             }
 
@@ -979,11 +1201,55 @@
     <div id="header-placeholder"></div>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Digitale Lösungen, die wirklich zu Deinem Geschäft passen</h1>
-            <p>Ich entwickle maßgeschneiderte digitale Lösungen, die mit Deinem Unternehmen wachsen. Von modernem
-                Webdesign bis zu intelligenten Automatisierungen.</p>
-            <a href="/demo" class="hero-cta-button">✉ Jetzt kostenfreie Website-Demo anfordern</a>
+        <div class="hero-split">
+            <div class="hero-left">
+                <h1>Digitale Lösungen, die wirklich zu Deinem Geschäft passen</h1>
+                <p>Ich entwickle maßgeschneiderte digitale Lösungen, die mit Deinem Unternehmen wachsen. Von modernem Webdesign bis zu intelligenten Automatisierungen.</p>
+                <div class="hero-ctas">
+                    <a href="/demo" class="hero-cta-primary">✉ Demo anfordern</a>
+                    <a href="#leistungen" class="hero-cta-secondary">Mehr erfahren →</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-placeholder">
+                    <img src="fotos/sonstige/mockup_webseite.png" alt="Webwerk.ai – Website Mockup" class="hero-mockup-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-benefits">
+        <div class="hero-benefits-container">
+            <div class="hero-benefit">
+                <i class="fi fi-rr-handshake"></i>
+                <span>Persönliche Betreuung – ein direkter Ansprechpartner</span>
+            </div>
+            <div class="hero-benefit">
+                <i class="fi fi-rr-time-fast"></i>
+                <span>Deine Projekte in 1–3 Wochen live</span>
+            </div>
+            <div class="hero-benefit">
+                <i class="fi fi-rr-lock"></i>
+                <span>DSGVO-konform & Hosting in Deutschland</span>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat-item">
+                <span class="hero-stat-number stat-number" data-target="24">0</span>
+                <div class="hero-stat-label">Projekte umgesetzt</div>
+            </div>
+            <div class="hero-stat-item">
+                <span class="hero-stat-number stat-number" data-target="18">0</span>
+                <div class="hero-stat-label">Zufriedene Kunden</div>
+            </div>
+            <div class="hero-stat-item">
+                <span class="hero-stat-number stat-number" data-target="14">0</span>
+                <div class="hero-stat-label">∅ Tage bis Launch</div>
+            </div>
+            <div class="hero-stat-item">
+                <span class="hero-stat-number stat-number" data-target="100">0</span>
+                <div class="hero-stat-label">100% DSGVO-konform</div>
+            </div>
         </div>
     </section>
 
@@ -1092,6 +1358,7 @@
         <a href="/demo" class="hero-cta-button">✉ Jetzt kostenfreie Demo anfordern</a>
     </section>
 
+    <div class="services-section">
     <section class="services" id="leistungen">
         <h2>Meine Leistungen</h2>
         <p class="services-subtitle">Alles, was Du für einen professionellen Online-Auftritt brauchst</p>
@@ -1133,29 +1400,8 @@
             </div>
         </div>
     </section>
+    </div>
 
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="24">0</span>
-                    <div class="stat-label">Projekte umgesetzt</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="18">0</span>
-                    <div class="stat-label">Zufriedene Kunden</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="14">0</span>
-                    <div class="stat-label">∅ Tage bis Launch</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="100">0</span>
-                    <div class="stat-label">100% DSGVO-konform</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="contact-section" id="kontakt">
         <div class="contact-container">
@@ -1217,40 +1463,26 @@
                     </div>
 
                     <div class="steps">
-                        <h4>So läuft die Zusammenarbeit:</h4>
+                        <h4>Was passiert nach Deiner Anfrage?</h4>
                         <div class="step-item">
                             <span class="step-number">1</span>
                             <div class="step-content">
-                                <span class="step-text">Erstgespräch (15 Min.)</span>
-                                <p class="step-description">Ich bespreche Deine Anforderungen</p>
+                                <span class="step-text">Antwort innerhalb von 24 Stunden</span>
+                                <p class="step-description">Ich melde mich persönlich – kein automatisiertes System</p>
                             </div>
                         </div>
                         <div class="step-item">
                             <span class="step-number">2</span>
                             <div class="step-content">
-                                <span class="step-text">Angebot & Planung</span>
-                                <p class="step-description">Transparente Kosten, klarer Zeitplan</p>
+                                <span class="step-text">Kostenloses Erstgespräch (15 Min.)</span>
+                                <p class="step-description">Wir klären Deine Anforderungen – unverbindlich & auf den Punkt</p>
                             </div>
                         </div>
                         <div class="step-item">
                             <span class="step-number">3</span>
                             <div class="step-content">
-                                <span class="step-text">Entwicklung</span>
-                                <p class="step-description">Du siehst regelmäßig den Fortschritt</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <span class="step-number">4</span>
-                            <div class="step-content">
-                                <span class="step-text">Feinschliff</span>
-                                <p class="step-description">Gemeinsam perfektionieren wir Deine Lösung</p>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <span class="step-number">5</span>
-                            <div class="step-content">
-                                <span class="step-text">Launch & Support</span>
-                                <p class="step-description">Ich bleibe an Deiner Seite</p>
+                                <span class="step-text">Konkretes Angebot</span>
+                                <p class="step-description">Transparente Kosten, klarer Zeitplan – ohne versteckte Extras</p>
                             </div>
                         </div>
                     </div>
@@ -1333,6 +1565,11 @@
         const statsSection = document.querySelector('.stats-section');
         if (statsSection) {
             statsObserver.observe(statsSection);
+        }
+
+        const heroBenefits = document.querySelector('.hero-benefits');
+        if (heroBenefits) {
+            statsObserver.observe(heroBenefits);
         }
 
         // EmailJS – Kontaktformular
