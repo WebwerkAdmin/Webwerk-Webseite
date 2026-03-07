@@ -1420,7 +1420,7 @@ footer {
     }
 
     .hero {
-        padding: 150px 2rem 80px;
+        padding: 130px 1.5rem 70px;
         min-height: auto;
     }
 
@@ -1430,6 +1430,14 @@ footer {
 
     .hero p {
         font-size: 1.1rem;
+    }
+
+    .legal-hero {
+        padding: 140px 1.5rem 60px;
+    }
+
+    .legal-hero h1 {
+        font-size: 2.5rem;
     }
 
     .design-features {
@@ -1442,11 +1450,75 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .site-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero {
+        padding: 110px 1.5rem 60px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta-button {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+
+    .legal-hero {
+        padding: 120px 1.5rem 50px;
+    }
+
+    .legal-hero h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        margin: 60px auto;
+    }
+
+    .benefits-section {
+        margin: 60px auto;
+    }
+
+    .about-section {
+        margin: 60px auto;
+    }
+
+    .process-section {
+        padding: 60px 1.5rem;
+    }
+
+    .faq-section {
+        padding: 60px 1.5rem;
+    }
+
+    .cta-section {
+        padding: 50px 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
     .design-features {
         grid-template-columns: 1fr;
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .design-card {
+        padding: 2rem 1.5rem;
     }
 
     .process-steps {
@@ -1457,6 +1529,15 @@ footer {
 
     .benefits-grid {
         grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 1.75rem;
+        gap: 1.25rem;
+    }
+
+    .benefit-content h3 {
+        font-size: 1.25rem;
     }
 
     .footer-grid {
@@ -1473,6 +1554,70 @@ footer {
 }
 
 @media (max-width: 640px) {
+    .nav-container {
+        padding: 0.7rem 0.75rem;
+    }
+
+    .hero {
+        padding: 95px 1rem 50px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-cta-button {
+        font-size: 1rem;
+        padding: 0.9rem 1.75rem;
+    }
+
+    .legal-hero {
+        padding: 95px 1rem 45px;
+    }
+
+    .legal-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 0 1rem;
+        margin: 50px auto;
+    }
+
+    .benefits-section {
+        padding: 0 1rem;
+        margin: 50px auto;
+    }
+
+    .about-section {
+        padding: 0 1rem;
+        margin: 50px auto;
+    }
+
+    .process-section {
+        padding: 50px 1rem;
+    }
+
+    .faq-section {
+        padding: 50px 1rem;
+    }
+
+    .cta-section {
+        padding: 40px 1rem;
+    }
+
+    .about-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .process-step {
+        padding: 1.75rem 1.25rem;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1482,12 +1627,73 @@ footer {
         text-align: center;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .footer-legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.4rem;
+        padding: 0.5rem 0.9rem;
     }
 
-    .nav-container {
-        padding: 0.8rem 1rem;
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-cta-button {
+        font-size: 0.95rem;
+        padding: 0.85rem 1.5rem;
+        gap: 0.5rem;
+    }
+
+    .legal-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .design-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .design-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .benefit-card {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .benefit-icon {
+        font-size: 2.2rem;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .faq-answer-inner {
+        padding: 0 1rem 1.25rem;
+        padding-top: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
     }
 }
 
