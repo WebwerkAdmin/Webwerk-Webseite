@@ -775,9 +775,9 @@ body.menu-open {
    =========================================== */
 
 .content-section {
-    max-width: 1400px;
-    margin: 100px auto;
-    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 2rem 80px;
 }
 
 .content-section h2 {
@@ -1593,13 +1593,24 @@ footer {
         scroll-snap-align: start;
     }
 
-    /* Benefits */
+    /* Benefits Slider */
     .benefits-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
         gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .benefits-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .benefit-card {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
         padding: 1.5rem;
         gap: 1.25rem;
     }
