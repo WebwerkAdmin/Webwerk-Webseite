@@ -1115,12 +1115,29 @@ footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     gap: 3rem;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    justify-items: start;
+    align-items: start;
+}
+
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-middle-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links--text li {
+    color: #999;
+    font-size: 0.95rem;
 }
 
 .footer-column h4 {
@@ -1178,9 +1195,10 @@ footer {
 
 /* Footer Demo CTA */
 .footer-demo-cta {
-    display: inline-block;
+    display: block;
     margin-top: 1.2rem;
     padding: 0.6rem 1.2rem;
+    text-align: center;
     background: linear-gradient(90deg, #6366f1, #22d3ee);
     color: #fff;
     font-size: 0.9rem;
@@ -1624,6 +1642,10 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
+
+    .footer-middle-columns {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1688,7 +1710,7 @@ footer {
     .process-container h2,
     .benefits-section h2,
     .cta-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .design-card {
@@ -1995,7 +2017,7 @@ footer {
 
 @media (max-width: 768px) {
     .faq-container h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .faq-question {
