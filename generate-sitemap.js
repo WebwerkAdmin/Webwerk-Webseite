@@ -55,27 +55,27 @@ const SITEMAP_CATEGORIES = [
     {
         title: 'Hauptseiten',
         pages: [
-            { href: 'index.html', label: 'Startseite' },
-            { href: 'ueber-webwerk.html', label: 'Über Webwerk.ai' },
-            { href: 'blog.html', label: 'Blog' },
-            { href: 'index.html#kontakt', label: 'Kontakt' },
+            { href: '/', label: 'Startseite' },
+            { href: 'ueber-webwerk', label: 'Über Webwerk.ai' },
+            { href: 'blog', label: 'Blog' },
+            { href: '/#kontakt', label: 'Kontakt' },
         ]
     },
     {
         title: 'Leistungen',
         pages: [
-            { href: 'webdesign.html', label: 'Webdesign' },
-            { href: 'entwicklung.html', label: 'Website-Entwicklung' },
-            { href: 'templates.html', label: 'Website-Templates' },
-            { href: 'automatisierung.html', label: 'Digitale Automatisierung' },
-            { href: 'ki-integration.html', label: 'KI-Integration' },
+            { href: 'webdesign', label: 'Webdesign' },
+            { href: 'entwicklung', label: 'Website-Entwicklung' },
+            { href: 'templates', label: 'Website-Templates' },
+            { href: 'automatisierung', label: 'Digitale Automatisierung' },
+            { href: 'ki-integration', label: 'KI-Integration' },
         ]
     },
     {
         title: 'Portfolio &amp; Demos',
         pages: [
-            { href: 'portfolio.html', label: 'Portfolio' },
-            { href: 'demo.html', label: 'Kostenlose Website-Demo' },
+            { href: 'portfolio', label: 'Portfolio' },
+            { href: 'demo', label: 'Kostenlose Website-Demo' },
         ]
     },
     {
@@ -86,9 +86,9 @@ const SITEMAP_CATEGORIES = [
     {
         title: 'Sicherheit &amp; Rechtliches',
         pages: [
-            { href: 'sicherheit-datenschutz.html', label: 'Sicherheit &amp; Datenschutz' },
-            { href: 'datenschutz.html', label: 'Datenschutzerkl&auml;rung' },
-            { href: 'impressum.html', label: 'Impressum' },
+            { href: 'sicherheit-datenschutz', label: 'Sicherheit &amp; Datenschutz' },
+            { href: 'datenschutz', label: 'Datenschutzerkl&auml;rung' },
+            { href: 'impressum', label: 'Impressum' },
         ]
     },
 ];
@@ -154,7 +154,7 @@ function generateSitemapXml(files) {
 
         const loc = file === 'index.html'
             ? `${DOMAIN}/`
-            : `${DOMAIN}/${file}`;
+            : `${DOMAIN}/${file.replace(/\.html$/, '')}`;
 
         const stats = fs.statSync(path.join(DIR, file));
         const lastmod = stats.mtime.toISOString().split('T')[0];
@@ -225,7 +225,7 @@ function generateSeitenubersicht(files) {
         // Automatisch aus Ordner befüllen
         if (category.autoDir && autoDirFiles[category.autoDir]) {
             const autoPages = autoDirFiles[category.autoDir].map(file => ({
-                href: file,
+                href: file.replace(/\.html$/, ''),
                 label: getPageTitle(path.join(DIR, file))
             }));
             pages = pages.concat(autoPages);
@@ -261,7 +261,7 @@ function generateSeitenubersicht(files) {
     <meta property="og:title" content="Sitemap - Webwerk AI">
     <meta property="og:description" content="Sitemap von Webwerk.ai – Alle Seiten auf einen Blick. Finde schnell die passende Leistung oder Information.">
     <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
-    <meta property="og:url" content="https://www.webwerk.ai/seitenubersicht.html">
+    <meta property="og:url" content="https://www.webwerk.ai/seitenubersicht">
     <meta property="og:type" content="website">
     <title>Sitemap - Webwerk AI</title>
     <link rel='stylesheet'
