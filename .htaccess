@@ -9,3 +9,8 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # nicht-www auf www umleiten (canonical domain)
 RewriteCond %{HTTP_HOST} ^webwerk\.ai [NC]
 RewriteRule ^(.*)$ https://www.webwerk.ai/$1 [L,R=301]
+
+# .html-Endung entfernen (301 Redirect zur kanonischen URL ohne .html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(.+)\.html$
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
