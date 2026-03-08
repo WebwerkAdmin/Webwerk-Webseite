@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://www.webwerk.ai/demo</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -73,8 +73,14 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.webwerk.ai/mockup-website</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://www.webwerk.ai/mockup-aerzte-hero</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.webwerk.ai/webdesign-aerzte-therapeuten</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

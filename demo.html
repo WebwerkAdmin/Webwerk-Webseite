@@ -13,14 +13,21 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kostenlose Demo Deiner neuen Website – Webwerk.ai erstellt Dir einen unverbindlichen Entwurf, wie Dein moderner Online-Auftritt aussehen kann.">
-    <meta property="og:title" content="Kostenlose Website-Demo anfordern - Webwerk AI">
-    <meta property="og:description" content="Kostenlose Demo Deiner neuen Website – Webwerk.ai erstellt Dir einen unverbindlichen Entwurf, wie Dein moderner Online-Auftritt aussehen kann.">
+    <meta name="description" content="Kostenlose Website-Demo von Webwerk.ai – ich erstelle Dir unverbindlich einen individuellen Entwurf Deiner neuen Website. Formular ausfüllen, Entwurf erhalten, selbst entscheiden.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kostenlose Website-Demo anfordern – Webwerk.ai">
+    <meta property="og:description" content="Kostenlose Website-Demo von Webwerk.ai – ich erstelle Dir unverbindlich einen individuellen Entwurf Deiner neuen Website. Einfach Formular ausfüllen.">
     <meta property="og:image" content="https://www.webwerk.ai/og-image.png">
-    <meta property="og:url" content="https://www.webwerk.ai/demo.html">
+    <meta property="og:url" content="https://www.webwerk.ai/demo">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kostenlose Website-Demo anfordern – Webwerk.ai">
+    <meta name="twitter:description" content="Ich erstelle Dir kostenfrei einen individuellen Entwurf Deiner neuen Website – unverbindlich und persönlich.">
+    <meta name="twitter:image" content="https://www.webwerk.ai/og-image.png">
     <link rel="canonical" href="https://www.webwerk.ai/demo">
-    <title>Kostenlose Website-Demo anfordern - Webwerk AI</title>
+    <title>Kostenlose Website-Demo anfordern – Webwerk.ai</title>
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -28,117 +35,318 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="emailjs-config.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ── Hero Split Layout ── */
+        .hero {
+            background: #f5f3f0;
+            padding: 160px 2rem 3rem;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            font-size: 90%;
-        }
-
-        /* Demo Page Intro */
-        .demo-intro {
-            max-width: 1400px;
+        .hero-split {
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 80px 2rem;
-        }
-
-        .demo-intro-grid {
+            width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 3rem;
             align-items: start;
         }
 
-        .demo-intro-text {
-            padding-top: 3rem;
+        .hero-left {
+            text-align: left;
+            padding-top: 1rem;
         }
 
-        .demo-intro-text h2 {
-            font-size: 2.5rem;
-            font-weight: 500;
-            color: #1a1a1a;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1.5rem;
-            line-height: 1.3;
+            line-height: 1.15;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
-        .demo-intro-text p {
-            font-size: 1.1rem;
+        .hero-subtitle {
+            font-size: 1.15rem;
             color: #666;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
         }
 
-        .demo-intro-text .highlight {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        /* Vorteile-Liste */
+        /* ── Benefits List ── */
         .demo-benefits {
             list-style: none;
             padding: 0;
-            margin: 2rem 0 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
         }
 
         .demo-benefits li {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
+            gap: 0.75rem;
+            font-size: 1rem;
             color: #444;
-            line-height: 1.6;
+            line-height: 1.55;
         }
 
-        .demo-benefits li .benefit-icon {
-            width: 36px;
-            height: 36px;
-            background: #3a4554;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .demo-benefits li i {
+            color: #6366f1;
+            font-size: 1.1rem;
             flex-shrink: 0;
             margin-top: 0.1rem;
         }
 
-        .demo-benefits li .benefit-icon i {
-            color: #22d3ee;
-            font-size: 1rem;
+        /* ── Was Du bekommst ── */
+        .demo-what-section {
+            background: #1a1a1a;
+            padding: 50px 2rem;
         }
 
-        /* Demo Form Section */
+        .demo-what-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .demo-what-label {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #6366f1;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .demo-what-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .demo-what-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .demo-what-item i {
+            font-size: 1.4rem;
+            color: #6366f1;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .demo-what-item div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .demo-what-item strong {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .demo-what-item span {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .demo-what-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .demo-what-section {
+                padding: 40px 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .demo-what-section {
+                padding: 35px 1rem;
+            }
+        }
+
+        /* ── Section Spacing Overrides ── */
+        .process-section {
+            background: #fff;
+            padding: 70px 2rem;
+        }
+
+        .faq-section {
+            padding: 70px 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.6rem !important;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem !important;
+        }
+
+        /* ── CTA Author Card ── */
+        .cta-author {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 14px;
+            text-align: left;
+        }
+
+        .cta-author-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .cta-author-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .cta-author-text strong {
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .cta-author-text span {
+            color: #c5d0db;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        /* ── Author Card ── */
+        .demo-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e4e1dc;
+        }
+
+        .demo-author-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .demo-author-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .demo-author-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .demo-author-text span {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .demo-author-text a {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 0.35rem;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #d1d5db;
+            border-radius: 50px;
+            padding: 0.25rem 0.75rem;
+            transition: border-color 0.2s, background 0.2s;
+            white-space: nowrap;
+        }
+
+        .demo-author-text a:hover {
+            border-color: #6366f1;
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        /* ── Trust Badges ── */
+        .hero-benefits {
+            background: #f5f3f0;
+            padding: 1.5rem 2rem 3rem;
+            border-top: 1px solid #e4e1dc;
+        }
+
+        .hero-benefits-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.88rem;
+            color: #444;
+            font-weight: 500;
+            background: #fff;
+            border: 1px solid #e4e1dc;
+            border-radius: 50px;
+            padding: 0.45rem 1rem;
+            white-space: nowrap;
+        }
+
+        .hero-benefit i {
+            font-size: 1rem;
+            color: #6366f1;
+            flex-shrink: 0;
+        }
+
+        /* ── Demo Form Card ── */
         .demo-form-wrapper {
-            background: #3a4554;
+            background: #fff;
+            border: 1px solid #e4e1dc;
             border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
         }
 
         .demo-form-wrapper h3 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: #fff;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.4rem;
         }
 
         .demo-form-wrapper .form-subtitle {
-            color: #8b96a3;
-            font-size: 1rem;
-            margin-bottom: 2rem;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.75rem;
         }
 
         .demo-form {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1rem;
         }
 
         .demo-form .form-group {
@@ -147,73 +355,80 @@
         }
 
         .demo-form .form-group label {
-            color: #c5d0db;
-            margin-bottom: 0.4rem;
-            font-size: 0.95rem;
-            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.35rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .demo-form .form-group label .opt {
+            font-weight: 400;
+            color: #9ca3af;
         }
 
         .demo-form .form-group input,
         .demo-form .form-group textarea,
         .demo-form .form-group select {
-            padding: 0.9rem 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.8rem 1rem;
+            border: 1px solid #d1d5db;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-family: inherit;
-            background: rgba(255, 255, 255, 0.08);
-            color: #fff;
-            transition: border-color 0.3s;
+            background: #fff;
+            color: #1a1a1a;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         .demo-form .form-group input::placeholder,
         .demo-form .form-group textarea::placeholder {
-            color: #8b96a3;
+            color: #9ca3af;
         }
 
         .demo-form .form-group input:focus,
         .demo-form .form-group textarea:focus,
         .demo-form .form-group select:focus {
             outline: none;
-            border-color: #22d3ee;
-            background: rgba(255, 255, 255, 0.12);
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
 
-        .demo-form .form-group select option {
-            background: #3a4554;
-            color: #fff;
+        .demo-form .form-group select {
+            cursor: pointer;
         }
 
         .demo-form .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.2rem;
+            gap: 1rem;
         }
 
         .demo-form .checkbox-group {
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
-            margin-top: 0.5rem;
+            margin-top: 0.25rem;
         }
 
         .demo-form .checkbox-group input[type="checkbox"] {
-            margin-top: 0.3rem;
+            margin-top: 0.2rem;
             width: 16px;
             height: 16px;
             cursor: pointer;
-            accent-color: #22d3ee;
+            accent-color: #6366f1;
+            flex-shrink: 0;
         }
 
         .demo-form .checkbox-group label {
-            color: #8b96a3;
-            font-size: 0.9rem;
+            color: #666;
+            font-size: 0.875rem;
             line-height: 1.5;
             cursor: pointer;
+            font-weight: 400;
         }
 
         .demo-form .checkbox-group a {
-            color: #22d3ee;
+            color: #6366f1;
             text-decoration: none;
         }
 
@@ -222,26 +437,28 @@
         }
 
         .demo-submit-btn {
-            background: #fff;
-            color: #1a1a1a;
+            background: #1a1a1a;
+            color: #fff;
             padding: 1rem 2rem;
             border: none;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            margin-top: 0.5rem;
+            margin-top: 0.25rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .demo-submit-btn:hover {
-            background: #f0f0f0;
+            background: #333;
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
         }
 
         .demo-submit-btn:disabled {
@@ -252,12 +469,12 @@
 
         .demo-form-error {
             display: none;
-            background: rgba(220, 38, 38, 0.15);
-            border: 1px solid rgba(220, 38, 38, 0.3);
-            color: #fca5a5;
-            padding: 1rem;
+            background: rgba(220, 38, 38, 0.07);
+            border: 1px solid rgba(220, 38, 38, 0.25);
+            color: #dc2626;
+            padding: 0.85rem 1rem;
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 0.5rem;
         }
 
@@ -265,84 +482,11 @@
             display: block;
         }
 
-        /* Ablauf Section */
-        .demo-process {
-            background: #f5f3f0;
-            padding: 100px 2rem;
-        }
-
-        .demo-process-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .demo-process-container h2 {
-            font-size: 3rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .demo-process-container .section-subtitle {
-            font-size: 1.25rem;
-            color: #666;
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .demo-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .demo-step {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .demo-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .demo-step .step-num {
-            width: 60px;
-            height: 60px;
-            background: #3a4554;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            margin: 0 auto 1.5rem;
-        }
-
-        .demo-step h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: #1a1a1a;
-            font-weight: 500;
-        }
-
-        .demo-step p {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Erfolgs-Nachricht */
+        /* ── Erfolgs-Nachricht ── */
         .form-success {
             display: none;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
 
         .form-success.is-visible {
@@ -356,75 +500,142 @@
         }
 
         .form-success h3 {
-            color: #fff;
+            color: #1a1a1a;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
         .form-success p {
-            color: #c5d0db;
-            font-size: 1.05rem;
+            color: #666;
+            font-size: 1rem;
         }
 
-        /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: #999;
-            padding: 4rem 2rem 2rem;
-            margin-top: 0;
-        }
-
-        /* Responsive */
+        /* ── Responsive ── */
         @media (max-width: 1024px) {
-            .demo-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 968px) {
-            .hero {
-                padding: 150px 2rem 80px;
-                min-height: auto;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .demo-intro-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .demo-intro-text {
-                padding-top: 0;
-            }
-
-            .demo-process-container h2,
-            .faq-container h2 {
-                font-size: 2rem;
+            .hero-split {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .demo-steps {
+            .hero {
+                padding: 100px 1.5rem 2rem;
+            }
+
+            .hero-split {
                 grid-template-columns: 1fr;
-                max-width: 500px;
-                margin: 0 auto;
+                gap: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                margin-bottom: 1.5rem;
+            }
+
+            .demo-benefits {
+                gap: 0.8rem;
+            }
+
+            .demo-benefits li {
+                font-size: 0.95rem;
+            }
+
+            /* Author-Card auf Mobile unterhalb des Formulars besser sichtbar */
+            .demo-author {
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+
+            .demo-form-wrapper {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .demo-form-wrapper h3 {
+                font-size: 1.3rem;
             }
 
             .demo-form .form-row {
                 grid-template-columns: 1fr;
             }
+
+            .hero-benefits-container {
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+
+            .demo-what-label {
+                font-size: 1.1rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .cta-section p {
+                font-size: 1.05rem !important;
+            }
+
+            .process-section {
+                padding: 50px 1.5rem;
+            }
+
+            .faq-section {
+                padding: 50px 1.5rem;
+            }
         }
 
         @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2rem;
+            .hero {
+                padding: 90px 1rem 1.5rem;
             }
 
-            .demo-intro-text h2 {
-                font-size: 1.8rem;
+            .hero h1 {
+                font-size: 1.75rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .demo-form-wrapper {
+                padding: 1.25rem 1rem;
+            }
+
+            .demo-form {
+                gap: 0.85rem;
+            }
+
+            .demo-submit-btn {
+                font-size: 0.95rem;
+                padding: 0.9rem 1.5rem;
+            }
+
+            .hero-benefits-container {
+                gap: 0.5rem;
+            }
+
+            .hero-benefit {
+                font-size: 0.82rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .cta-section p {
+                font-size: 1rem !important;
+            }
+
+            .process-section,
+            .faq-section {
+                padding: 40px 1rem;
             }
         }
     </style>
@@ -442,8 +653,81 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Demo anfordern",
+                "name": "Kostenlose Demo anfordern",
                 "item": "https://www.webwerk.ai/demo"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Kostenlose Website-Demo anfordern",
+        "description": "Kostenlose Website-Demo von Webwerk.ai – individuelle Entwürfe für kleine und mittelständische Unternehmen, Selbstständige und Freiberufler.",
+        "url": "https://www.webwerk.ai/demo",
+        "inLanguage": "de",
+        "provider": {
+            "@type": "Organization",
+            "name": "Webwerk.ai",
+            "url": "https://www.webwerk.ai"
+        },
+        "offers": {
+            "@type": "Offer",
+            "name": "Kostenlose Website-Demo",
+            "description": "Unverbindlicher Website-Entwurf, individuell erstellt – kostenfrei und ohne Verpflichtung.",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Ist die Demo wirklich kostenlos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, die Demo ist komplett kostenfrei und unverbindlich. Du gehst keinerlei Verpflichtung ein. Ich möchte Dir einfach zeigen, was möglich ist."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange dauert es, bis ich meinen Website-Entwurf bekomme?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In der Regel bekommst Du Deinen individuellen Entwurf innerhalb von 3–5 Werktagen nach Eingang Deiner Anfrage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was passiert nach der Demo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nach der Präsentation entscheidest Du in Ruhe, ob Du mit mir zusammenarbeiten möchtest. Es gibt keinen Druck und keine automatische Vertragsbindung."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Brauche ich eine bestehende Website für die Demo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nein, eine bestehende Website ist nicht nötig. Wenn Du noch keine hast, erstelle ich Dir einfach eine Demo auf Basis Deiner Branche und Deiner Wünsche – ganz von Grund auf."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was kostet eine neue Website bei Webwerk.ai?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Kosten hängen vom Umfang Deines Projekts ab. Nach der Demo besprechen wir transparent die Optionen und Du bekommst ein faires Angebot ohne versteckte Kosten."
+                }
             }
         ]
     }
@@ -453,43 +737,45 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <!-- Hero mit Split-Layout -->
     <section class="hero" id="demo">
-        <div class="hero-content">
-            <h1>Sieh selbst, wie Deine neue Website aussehen kann</h1>
-            <p>Ich erstelle Dir kostenfrei und unverbindlich einen Entwurf Deiner neuen Website. So kannst Du Dir vorstellen, wie Dein moderner Online-Auftritt bei Deinen Kunden wirkt.</p>
-        </div>
-    </section>
-
-    <section class="demo-intro">
-        <div class="demo-intro-grid">
-            <div class="demo-intro-text">
-                <h2>Deine Website verdient ein Upgrade</h2>
-                <p>Viele Unternehmen wissen, dass ihre Website nicht mehr zeitgemäß ist – aber der erste Schritt fühlt sich groß an. Genau dafür gibt es meine <span class="highlight">kostenlose Website-Demo</span>.</p>
-                <p>Ich schaue mir Deine aktuelle Seite an und erstelle Dir einen modernen Entwurf, der zeigt, wie Dein neuer Auftritt aussehen kann. Ohne Risiko, ohne Verpflichtung.</p>
+        <div class="hero-split">
+            <div class="hero-left">
+                <h1>Sieh selbst, wie Deine neue Website aussehen kann</h1>
+                <p class="hero-subtitle">Ich erstelle Dir kostenfrei und unverbindlich einen Entwurf Deiner neuen Website – individuell auf Dein Unternehmen zugeschnitten.</p>
 
                 <ul class="demo-benefits">
                     <li>
-                        <div class="benefit-icon"><i class="fi fi-rr-check"></i></div>
+                        <i class="fi fi-rr-check"></i>
                         <span><strong>Komplett kostenfrei</strong> – Kein Haken, keine versteckten Kosten</span>
                     </li>
                     <li>
-                        <div class="benefit-icon"><i class="fi fi-rr-clock"></i></div>
+                        <i class="fi fi-rr-time-fast"></i>
                         <span><strong>Schnelle Umsetzung</strong> – Dein Entwurf innerhalb weniger Tage</span>
                     </li>
                     <li>
-                        <div class="benefit-icon"><i class="fi fi-rr-eye"></i></div>
+                        <i class="fi fi-rr-eye"></i>
                         <span><strong>Echte Vorschau</strong> – Eine Demo individuell für Dich abgestimmt</span>
                     </li>
                     <li>
-                        <div class="benefit-icon"><i class="fi fi-rr-handshake"></i></div>
+                        <i class="fi fi-rr-handshake"></i>
                         <span><strong>Unverbindlich</strong> – Du entscheidest danach, ob es weitergeht</span>
                     </li>
                 </ul>
+
+                <div class="demo-author">
+                    <img src="fotos/marcel-ulbrich.jpg" alt="Marcel Ulbrich – Webwerk.ai" class="demo-author-img" fetchpriority="high">
+                    <div class="demo-author-text">
+                        <strong>Marcel Ulbrich</strong>
+                        <span>Ich erstelle Deine Demo persönlich und begleite Dich durch den ersten Eindruck.</span>
+                        <a href="/ueber-webwerk">Mehr über mich →</a>
+                    </div>
+                </div>
             </div>
 
             <div class="demo-form-wrapper" id="demo-formular">
-                <h3>Fordere jetzt Deine Demo an </h3>
-                <p class="form-subtitle">Verrate mir etwas über Deine aktuelle Webseite und ich erstelle Dir einen Entwurf.</p>
+                <h3>Fordere jetzt Deine Demo an</h3>
+                <p class="form-subtitle">Verrate mir etwas über Dich – ich erstelle Dir einen Entwurf.</p>
 
                 <div class="demo-form-error" id="demoError">Es ist ein Fehler aufgetreten. Bitte versuche es erneut oder schreibe mir direkt eine E-Mail.</div>
                 <form class="demo-form" id="demoForm">
@@ -506,18 +792,18 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="demo-company">Unternehmen (optional)</label>
+                            <label for="demo-company">Unternehmen <span class="opt">(optional)</span></label>
                             <input type="text" id="demo-company" name="company" placeholder="Dein Firmenname">
                         </div>
                         <div class="form-group">
-                            <label for="demo-phone">Telefon (optional)</label>
+                            <label for="demo-phone">Telefon <span class="opt">(optional)</span></label>
                             <input type="tel" id="demo-phone" name="phone" placeholder="+49 123 456789">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="demo-website">Deine aktuelle Website-URL *</label>
-                        <input type="text" id="demo-website" name="website" required placeholder="https://www.deine-seite.de">
+                        <label for="demo-website">Deine aktuelle Website-URL <span style="font-weight:400; color:#9ca3af;">(optional)</span></label>
+                        <input type="text" id="demo-website" name="website" placeholder="https://www.deine-seite.de – oder leer lassen, falls noch keine">
                     </div>
 
                     <div class="form-group">
@@ -535,9 +821,14 @@
                         </select>
                     </div>
 
+                    <div class="form-group" id="branche-sonstige-group" style="display:none;">
+                        <label for="demo-branche-sonstige">Deine Branche *</label>
+                        <input type="text" id="demo-branche-sonstige" name="branche_sonstige" placeholder="z.B. Fotografie, Eventplanung, ...">
+                    </div>
+
                     <div class="form-group">
-                        <label for="demo-message">Was ist Dir bei Deiner neuen Website besonders wichtig? (optional)</label>
-                        <textarea id="demo-message" name="message" rows="4" placeholder="z.B. modernes Design, bessere Kundenansprache, Online-Terminbuchung ..."></textarea>
+                        <label for="demo-message">Was ist Dir bei Deiner neuen Website besonders wichtig? <span class="opt">(optional)</span></label>
+                        <textarea id="demo-message" name="message" rows="3" placeholder="z.B. modernes Design, bessere Kundenansprache, Online-Terminbuchung ..."></textarea>
                     </div>
 
                     <div class="checkbox-group">
@@ -557,29 +848,59 @@
         </div>
     </section>
 
-    <section class="demo-process">
-        <div class="demo-process-container">
-            <h2>So bekommst Du Deine Demo</h2>
-            <p class="section-subtitle">In vier einfachen Schritten zu Deinem neuen Website-Entwurf</p>
 
-            <div class="demo-steps">
-                <div class="demo-step">
-                    <div class="step-num">1</div>
+    <!-- Was Du bekommst -->
+    <section class="demo-what-section">
+        <div class="demo-what-container">
+            <p class="demo-what-label">Was Du bekommst</p>
+            <div class="demo-what-grid">
+                <div class="demo-what-item">
+                    <i class="fi fi-rr-globe-alt"></i>
+                    <div>
+                        <strong>Echte Demo-Website</strong>
+                        <span>Ein vollständig gestaltetes Mockup Deiner neuen Website – keine Skizze, kein PowerPoint.</span>
+                    </div>
+                </div>
+                <div class="demo-what-item">
+                    <i class="fi fi-rr-user-headset"></i>
+                    <div>
+                        <strong>Dein Entwurf per E-Mail</strong>
+                        <span>Ich schicke Dir den Entwurf direkt per E-Mail, damit Du ihn in Deinem eigenen Tempo prüfen kannst.</span>
+                    </div>
+                </div>
+                <div class="demo-what-item">
+                    <i class="fi fi-rr-badge-check"></i>
+                    <div>
+                        <strong>Konkretes Angebot</strong>
+                        <span>Falls Du weitermachen möchtest, bekommst Du direkt einen fairen Festpreis – ohne versteckte Kosten.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2>So bekommst Du Deine Demo</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
                     <h3>Formular ausfüllen</h3>
-                    <p>Sag mir, wer Du bist und teile mir Deine aktuelle Website-URL mit.</p>
+                    <p>Sag mir kurz, wer Du bist, in welcher Branche Du tätig bist und was Dir bei Deiner neuen Website wichtig ist.</p>
                 </div>
-                <div class="demo-step">
-                    <div class="step-num">2</div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
                     <h3>Analyse</h3>
-                    <p>Ich schaue mir Deine aktuelle Website genau an und identifiziere Verbesserungspotenzial.</p>
+                    <p>Ich schaue mir Deine aktuelle Website an – oder recherchiere Deinen Markt, falls Du noch keine hast – und identifiziere Potenzial.</p>
                 </div>
-                <div class="demo-step">
-                    <div class="step-num">3</div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
                     <h3>Entwurf erstellen</h3>
                     <p>Ich erstelle einen individuellen Entwurf, der zeigt, wie Dein neuer Auftritt aussehen kann.</p>
                 </div>
-                <div class="demo-step">
-                    <div class="step-num">4</div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
                     <h3>Vorstellung</h3>
                     <p>In einem kurzen Gespräch stelle ich Dir den Entwurf vor und beantworte Deine Fragen.</p>
                 </div>
@@ -587,6 +908,7 @@
         </div>
     </section>
 
+    <!-- FAQ -->
     <section class="faq-section">
         <div class="faq-container">
             <h2>Häufig gestellte Fragen</h2>
@@ -636,7 +958,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Idealerweise ja, damit ich Dir zeigen kann, wie Dein verbesserter Auftritt aussehen kann. Wenn Du noch keine Website hast, kontaktiere mich direkt über das <a href="index.html#kontakt" style="color: #6366f1;">Kontaktformular</a>.
+                            Nein, eine bestehende Website ist nicht nötig. Wenn Du noch keine hast, erstelle ich Dir einfach eine Demo auf Basis Deiner Branche und Deiner Wünsche – ganz von Grund auf.
                         </div>
                     </div>
                 </div>
@@ -659,9 +981,9 @@
 
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Bereit für Deinen neuen Online-Auftritt?</h2>
-            <p>Fordere jetzt Deine kostenlose Demo an und überzeuge Dich selbst.</p>
-            <a href="#demo-formular" class="hero-cta-button" style="background: #fff; color: #1a1a1a;">Jetzt Demo anfordern</a>
+            <h2>Noch unentschlossen? Schau Dir einfach die Demo an.</h2>
+            <p>Kein Risiko, keine Verpflichtung – nur ein ehrlicher Blick, wie Deine neue Website aussehen könnte. Formular ausfüllen, Entwurf erhalten, selbst entscheiden.</p>
+            <a href="#demo-formular" class="hero-cta-button" style="background: #fff; color: #1a1a1a;">Kostenlose Demo anfordern</a>
         </div>
     </section>
 
@@ -697,23 +1019,21 @@
         document.addEventListener('DOMContentLoaded', function () {
             loadComponent('header.html', 'header-placeholder');
             loadComponent('footer.html', 'footer-placeholder');
-        });
 
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(function (button) {
-            button.addEventListener('click', function () {
-                const item = this.closest('.faq-item');
-                const isOpen = item.classList.contains('is-open');
+            // FAQ Toggle
+            document.querySelectorAll('.faq-question').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const item = this.closest('.faq-item');
+                    const isOpen = item.classList.contains('is-open');
 
-                // Alle schließen
-                document.querySelectorAll('.faq-item.is-open').forEach(function (openItem) {
-                    openItem.classList.remove('is-open');
+                    document.querySelectorAll('.faq-item.is-open').forEach(function (openItem) {
+                        openItem.classList.remove('is-open');
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add('is-open');
+                    }
                 });
-
-                // Aktuelles öffnen (wenn es nicht schon offen war)
-                if (!isOpen) {
-                    item.classList.add('is-open');
-                }
             });
         });
 
@@ -772,6 +1092,22 @@
                 });
             }
         })();
+
+        // Sonstige Branche – Textfeld ein-/ausblenden
+        var brancheSelect = document.getElementById('demo-branche');
+        var sonstigeGroup = document.getElementById('branche-sonstige-group');
+        var sonstigeInput = document.getElementById('demo-branche-sonstige');
+
+        brancheSelect.addEventListener('change', function() {
+            if (this.value === 'sonstiges') {
+                sonstigeGroup.style.display = '';
+                sonstigeInput.required = true;
+            } else {
+                sonstigeGroup.style.display = 'none';
+                sonstigeInput.required = false;
+                sonstigeInput.value = '';
+            }
+        });
 
         // Smooth Scroll für Anker-Links
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
