@@ -8,7 +8,8 @@
       "Bash(python:*)",
       "Bash(chmod:*)",
       "Bash(git push:*)",
-      "WebFetch(domain:webwerk.ai)"
+      "WebFetch(domain:webwerk.ai)",
+      "WebFetch(domain:www.saxowert.de)"
     ]
   }
 }
